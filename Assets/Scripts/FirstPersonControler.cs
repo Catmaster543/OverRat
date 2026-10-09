@@ -24,6 +24,8 @@ public class FirstPersonControler : MonoBehaviour
     private float CurrentSpeed => walkSpeed * (playerInputHandler.SprintTriggered ? sprintMultiplier : 1);
     void Start()
     {
+        playerInputHandler = GameObject.FindGameObjectWithTag("InputHandler").GetComponent<PlayerInputHandler>();
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
