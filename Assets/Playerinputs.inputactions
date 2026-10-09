@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "Playerinputs",
     "maps": [
         {
@@ -36,6 +37,15 @@
                     "name": "Sprint",
                     "type": "Button",
                     "id": "427c009b-9450-4030-89c3-5dd36678ae26",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Bite",
+                    "type": "Button",
+                    "id": "6b0c9cf7-3490-42f6-b8ec-7faed5d47992",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -128,6 +138,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d8a6967-8827-41fa-8b9d-1308a31d739d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bite",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

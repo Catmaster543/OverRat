@@ -860,6 +860,7 @@ MonoBehaviour:
   rotation: Rotation
   jump: Jump
   sprint: Sprint
+  bite: Bite
 --- !u!4 &1033564488
 Transform:
   m_ObjectHideFlags: 0

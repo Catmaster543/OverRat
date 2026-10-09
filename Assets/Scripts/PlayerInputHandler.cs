@@ -16,11 +16,13 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField] private string rotation = "Rotation";
     [SerializeField] private string jump = "Jump";
     [SerializeField] private string sprint = "Sprint";
+    [SerializeField] private string bite = "Bite";
 
     private InputAction movementAction;
     private InputAction rotationAction;
     private InputAction jumpAction;
     private InputAction sprintAction;
+    private InputAction biteAction;
 
     public Vector2 MovementInput { get; private set; }
 
@@ -29,6 +31,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool JumpTriggered { get; private set; }
 
     public bool SprintTriggered { get; private set; }
+    public bool BiteTriggered { get; private set; }
 
     private void Awake()
     {
@@ -38,6 +41,7 @@ public class PlayerInputHandler : MonoBehaviour
         rotationAction = mapReference.FindAction(rotation);
         jumpAction = mapReference.FindAction(jump);
         sprintAction = mapReference.FindAction(sprint);
+        biteAction = mapReference.FindAction(bite);
 
         SubscribeActionValuesToInputEvents();
     }
@@ -55,6 +59,9 @@ public class PlayerInputHandler : MonoBehaviour
 
         sprintAction.performed += inputInfo => SprintTriggered = true;
         sprintAction.canceled += inputInfo => SprintTriggered = false;
+
+        biteAction.performed += inputInfo => BiteTriggered = true;
+        biteAction.canceled += inputInfo => BiteTriggered = false;
     }
 
     private void OnEnable()

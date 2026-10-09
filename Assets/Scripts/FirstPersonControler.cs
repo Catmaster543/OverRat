@@ -18,6 +18,7 @@ public class FirstPersonControler : MonoBehaviour
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private PlayerInputHandler playerInputHandler;
+    [SerializeField] private Rat player;
 
     private Vector3 currentMovement;
     private float VerticalRotation;
@@ -25,6 +26,7 @@ public class FirstPersonControler : MonoBehaviour
     void Start()
     {
         playerInputHandler = GameObject.FindGameObjectWithTag("InputHandler").GetComponent<PlayerInputHandler>();
+        player = gameObject.GetComponent<Rat>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -35,6 +37,7 @@ public class FirstPersonControler : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
+        HandleBiting();
     }
 
     private Vector3 CalculateWorldDirection()
@@ -42,6 +45,14 @@ public class FirstPersonControler : MonoBehaviour
         Vector3 inputDirection = new Vector3(playerInputHandler.MovementInput.x, 0f, playerInputHandler.MovementInput.y);
         Vector3 worldDirection = transform.TransformDirection(inputDirection);
         return worldDirection.normalized;
+    }
+
+    private void HandleBiting()
+    {
+        if (playerInputHandler.BiteTriggered)
+        {
+            player.Bite();
+        }
     }
 
     private void HandleJumping()
