@@ -11,6 +11,7 @@ public class Rat : MonoBehaviour
     private Ray ray;
 
     private float clocker;
+    private bool biteTipActive = true;
 
     void Start()
     {
@@ -23,6 +24,11 @@ public class Rat : MonoBehaviour
 
     public void Bite()
     {
+        if (biteTipActive)
+        {
+            switcher.HideBiteTip();
+            biteTipActive = false;
+        }
         if (clocker >= biteCd)
         {
             clocker = 0;
