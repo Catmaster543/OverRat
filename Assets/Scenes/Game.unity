@@ -565,6 +565,138 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &486640982
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 886028850}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.58
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26437962
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.209301
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_Name
+      value: Rat
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_TagString
+      value: SewerRat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+--- !u!4 &486640983 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+  m_PrefabInstance: {fileID: 486640982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &615405394
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 886028850}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.319832
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26437962
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.209301
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_Name
+      value: Rat (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_TagString
+      value: SewerRat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+--- !u!4 &615405395 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+  m_PrefabInstance: {fileID: 615405394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &694715420
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +957,108 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &886028849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 886028850}
+  m_Layer: 0
+  m_Name: Sacrifical Rats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &886028850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886028849}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 68.83, y: 1.34951, z: -61.66045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 486640983}
+  - {fileID: 1690768538}
+  - {fileID: 615405395}
+  - {fileID: 1920689029}
+  - {fileID: 992494334}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &992494333
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 886028850}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.57
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26437962
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.209301
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_Name
+      value: Rat (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_TagString
+      value: SewerRat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+--- !u!4 &992494334 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+  m_PrefabInstance: {fileID: 992494333}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1033564486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,6 +1820,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2138219935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1690768537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 886028850}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26437962
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.209301
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_Name
+      value: Rat (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_TagString
+      value: SewerRat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+--- !u!4 &1690768538 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+  m_PrefabInstance: {fileID: 1690768537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1870728601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,6 +2046,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1920689028
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 886028850}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26437962
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.209301
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_Name
+      value: Rat (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_TagString
+      value: SewerRat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+--- !u!4 &1920689029 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+  m_PrefabInstance: {fileID: 1920689028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2138219934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,3 +2158,4 @@ SceneRoots:
   - {fileID: 1870728603}
   - {fileID: 2138219935}
   - {fileID: 1373505875}
+  - {fileID: 886028850}

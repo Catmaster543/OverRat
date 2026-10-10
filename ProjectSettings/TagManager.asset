@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InputHandler
   - Person
+  - SewerRat
   layers:
   - Default
   - TransparentFX
