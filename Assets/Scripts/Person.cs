@@ -10,6 +10,9 @@ public class Person : MonoBehaviour
     }
     void Update()
     {
-        
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -96,8 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rat
   switcher: {fileID: 0}
-  damage: 0
+  damage: 10
   range: 0
+  biteCd: 1
 --- !u!1 &5042760851903560893
 GameObject:
   m_ObjectHideFlags: 0

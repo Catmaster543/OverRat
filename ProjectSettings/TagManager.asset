@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - InputHandler
+  - Person
   layers:
   - Default
   - TransparentFX
