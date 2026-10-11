@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainSceneFlipper : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI livesText;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject biteTip;
+
+    [Header("Shared References")]
+    public Image enemyHpIndicator;
 
     public void SwitchToMain()
     {
