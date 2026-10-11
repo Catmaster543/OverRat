@@ -7,6 +7,7 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     
     [SerializeField] private int livesLeft;
+    public int playerXp;
 
     [Header("Scene References")]
     [SerializeField] private GameObject sewerCam;
@@ -15,10 +16,18 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI livesText;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject biteTip;
+    [SerializeField] private TextMeshProUGUI xpText;
+    [SerializeField] private TextMeshProUGUI damageUpgradeText;
+    [SerializeField] private TextMeshProUGUI rangeUpgradeText;
 
     [Header("Shared References")]
     public Image enemyHpIndicator;
+    public int playerDamage = 10;
+    public int playerRange = 3;
 
+
+    private int damageUpgradeCost = 10;
+    private int rangeUpgradeCost = 10;
     public void SwitchToMain()
     {
         if (livesLeft > 0)
@@ -45,5 +54,34 @@ public class MainSceneFlipper : MonoBehaviour
     public void HideBiteTip()
     {
         biteTip.SetActive(false);
+    }
+
+    public void UpdateXpCounter()
+    {
+        xpText.text = $"{playerXp} xp";
+    }
+
+    public void UpgradeDamage()
+    {
+        if (playerXp >= damageUpgradeCost)
+        {
+            playerXp -= damageUpgradeCost;
+            UpdateXpCounter();
+            playerDamage += 10;
+            damageUpgradeCost += 10;
+            damageUpgradeText.text = $"Upgrade Damage \nCost: {damageUpgradeCost} xp";
+        }
+    }
+
+    public void UpgradeRange()
+    {
+        if (playerXp >= rangeUpgradeCost)
+        {
+            playerXp -= rangeUpgradeCost;
+            UpdateXpCounter();
+            playerRange += 1;
+            rangeUpgradeCost += 10;
+            rangeUpgradeText.text = $"Upgrade Range \nCost: {rangeUpgradeCost} xp";
+        }
     }
 }

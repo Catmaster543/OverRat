@@ -19,6 +19,8 @@ public class Rat : MonoBehaviour
     void Start()
     {
         enemyHpIndicator = switcher.enemyHpIndicator;
+        damage = switcher.playerDamage;
+        range = switcher.playerRange;
     }
     void Update()
     {
