@@ -126,4 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Person
   hp: 100
-  walkSpeed: 0
+  walkSpeed: 2
+  xpReward: 10
