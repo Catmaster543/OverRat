@@ -50,9 +50,11 @@ public class Rat : MonoBehaviour
                 Debug.Log("Hit a person (aka. valid target)");
                 Person person = hit.collider.gameObject.GetComponent<Person>();
                 enemyHpIndicator.gameObject.SetActive(true);
-                StopCoroutine(DisableEnemyHpIndicator());
+                Debug.Log("Interrupting all coroutines..");
+                StopAllCoroutines();
                 person.hp -= damage;
                 enemyHpIndicator.rectTransform.sizeDelta = new Vector3(person.hp * 2, enemyHpIndicator.rectTransform.sizeDelta.y);
+                Debug.Log("Starting a new coroutine");
                 StartCoroutine(DisableEnemyHpIndicator());
             }
             else
@@ -75,7 +77,9 @@ public class Rat : MonoBehaviour
 
     public IEnumerator DisableEnemyHpIndicator()
     {
+        Debug.Log("Waiting 2s till hiding the indicator.");
         yield return new WaitForSeconds(2);
+        Debug.Log("2s passed without interuption, hiding the indicator.");
         enemyHpIndicator.gameObject.SetActive(false);
     }
 }
