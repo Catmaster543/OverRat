@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainSceneFlipper : MonoBehaviour
@@ -19,11 +22,13 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI xpText;
     [SerializeField] private TextMeshProUGUI damageUpgradeText;
     [SerializeField] private TextMeshProUGUI rangeUpgradeText;
+    [SerializeField] private GameObject gameOverUI;
 
     [Header("Shared References")]
     public Image enemyHpIndicator;
     public int playerDamage = 10;
     public int playerRange = 3;
+    public List<GameObject> people;
 
 
     private int damageUpgradeCost = 10;
@@ -44,11 +49,21 @@ public class MainSceneFlipper : MonoBehaviour
 
     public void SwitchToSewer()
     {
-        sewerCam.SetActive(true);
-        sewerUI.SetActive(true);
-        gameUI.SetActive(false);
-        biteTip.SetActive(false);
-        livesText.text = $"Lives left: {livesLeft}";
+        if (livesLeft <= 0)
+        {
+            sewerCam.SetActive(true);
+            gameOverUI.SetActive(true);
+            TextMeshProUGUI gameOverText = gameOverUI.GetComponentInChildren<TextMeshProUGUI>();
+            gameOverText.text = "All your rat lives are gone, Game over!";
+        }
+        else
+        {
+            sewerCam.SetActive(true);
+            sewerUI.SetActive(true);
+            gameUI.SetActive(false);
+            biteTip.SetActive(false);
+            livesText.text = $"Lives left: {livesLeft}";
+        }
     }
 
     public void HideBiteTip()
@@ -83,5 +98,22 @@ public class MainSceneFlipper : MonoBehaviour
             rangeUpgradeCost += 10;
             rangeUpgradeText.text = $"Upgrade Range \nCost: {rangeUpgradeCost} xp";
         }
+    }
+
+    public void CheckCompletion()
+    {
+        if (people.Count == 0)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            gameOverUI.SetActive(true);
+            TextMeshProUGUI gameOverText = gameOverUI.GetComponentInChildren<TextMeshProUGUI>();
+            gameOverText.text = "You've infected everyone, congrats!";
+        }
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }

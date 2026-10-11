@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomPeopleSpawner : MonoBehaviour
@@ -8,10 +10,14 @@ public class RandomPeopleSpawner : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject spawnArea;
     [SerializeField] private GameObject personPrefab;
+    [SerializeField] private List<GameObject> spawnedPeople = new List<GameObject>();
+
+    private MainSceneFlipper switcher;
 
 
     void Start()
     {
+        switcher = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<MainSceneFlipper>();
         SpawnPeople();
     }
 
@@ -30,7 +36,9 @@ public class RandomPeopleSpawner : MonoBehaviour
             float z = Random.Range(b.min.z, b.max.z);
             float y = b.max.y + 1;
 
-            Instantiate(personPrefab, new Vector3(x, y, z), Quaternion.identity);
+            GameObject person = Instantiate(personPrefab, new Vector3(x, y, z), Quaternion.identity);
+            spawnedPeople.Add(person);
         }
+        switcher.people = spawnedPeople;
     }
 }

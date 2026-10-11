@@ -19,6 +19,8 @@ public class Person : MonoBehaviour
         {
             switcher.playerXp += xpReward;
             switcher.UpdateXpCounter();
+            switcher.people.Remove(gameObject);
+            switcher.CheckCompletion();
             Destroy(gameObject);
         }
     }
