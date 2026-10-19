@@ -23,6 +23,7 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI damageUpgradeText;
     [SerializeField] private TextMeshProUGUI rangeUpgradeText;
     [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private TextMeshProUGUI collectTimeText;
 
     [Header("Shared References")]
     public Image enemyHpIndicator;
@@ -30,9 +31,33 @@ public class MainSceneFlipper : MonoBehaviour
     public int playerRange = 3;
     public List<GameObject> people;
 
+    [Header("Live References")]
+    public GameObject currentRat;
+
+    [Header("Settings")]
+    [SerializeField] private float collectTime;
+
+    bool tick = false;
 
     private int damageUpgradeCost = 10;
     private int rangeUpgradeCost = 10;
+
+    void Update()
+    {
+        if (tick)
+        {
+            if (collectTime >= 0)
+            {
+                collectTime -= Time.deltaTime;
+                collectTimeText.text = ((int)collectTime).ToString();
+            }
+            else
+            {
+                Destroy(currentRat);
+            }
+        }
+    }
+
     public void SwitchToMain()
     {
         if (livesLeft > 0)
@@ -40,10 +65,12 @@ public class MainSceneFlipper : MonoBehaviour
             sewerUI.SetActive(false);
             GameObject player = Instantiate(playerPrefab, playerSpawn.transform.position, Quaternion.identity);
             player.GetComponent<Rat>().switcher = this;
+            currentRat = player;
             sewerCam.SetActive(false);
             gameUI.SetActive(true);
             livesLeft--;
             biteTip.SetActive(true);
+            tick = true;
         }
     }
 
@@ -110,6 +137,11 @@ public class MainSceneFlipper : MonoBehaviour
             TextMeshProUGUI gameOverText = gameOverUI.GetComponentInChildren<TextMeshProUGUI>();
             gameOverText.text = "You've infected everyone, congrats!";
         }
+    }
+
+    public void RemovePlayer()
+    {
+        Destroy(currentRat);
     }
 
     public void ReturnToMainMenu()
