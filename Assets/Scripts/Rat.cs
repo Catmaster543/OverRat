@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VectorGraphics;
 using UnityEditor;
 using UnityEngine;
@@ -15,6 +17,8 @@ public class Rat : MonoBehaviour
     private float clocker;
     private bool biteTipActive = true;
     private Image enemyHpIndicator;
+
+    public List<Ingredient> collectedIngredients = new();
 
     void Start()
     {
@@ -58,6 +62,12 @@ public class Rat : MonoBehaviour
                 enemyHpIndicator.rectTransform.sizeDelta = new Vector3(person.hp * 2, enemyHpIndicator.rectTransform.sizeDelta.y);
                 Debug.Log("Starting a new coroutine");
                 StartCoroutine(DisableEnemyHpIndicator());
+            }
+            else if (hit.collider.gameObject.tag == "Ingredient")
+            {
+                Debug.Log("Hit an ingredient");
+                collectedIngredients.Add(hit.collider.gameObject.GetComponent<Ingredient>());
+                hit.collider.gameObject.SetActive(false);
             }
             else
             {
