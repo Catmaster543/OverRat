@@ -65,9 +65,26 @@ public class Rat : MonoBehaviour
             }
             else if (hit.collider.gameObject.tag == "Ingredient")
             {
+                bool found = false;
                 Debug.Log("Hit an ingredient");
-                collectedIngredients.Add(hit.collider.gameObject);
-                hit.collider.gameObject.SetActive(false);
+                for (int i  = 0; i < switcher.invSlots.Length; i++)
+                {
+                    Slot currentSlot = switcher.invSlots[i].GetComponent<Slot>();
+                    Debug.Log($"Current slot is {currentSlot}");
+                    if (currentSlot.currentItem == null)
+                    {
+                        found = true;
+                        currentSlot.currentItem = hit.collider.gameObject;
+                        currentSlot.UpdateIcon();
+                        collectedIngredients.Add(hit.collider.gameObject);
+                        hit.collider.gameObject.SetActive(false);
+                        break;
+                    }
+                }
+                if (!found)
+                {
+                    Debug.Log("Inventory full, unable to pick up!");
+                }
             }
             else
             {

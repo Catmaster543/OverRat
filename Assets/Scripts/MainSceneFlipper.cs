@@ -24,6 +24,7 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI rangeUpgradeText;
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private TextMeshProUGUI collectTimeText;
+    public GameObject[] invSlots = new GameObject[3];
 
     [Header("Shared References")]
     public Image enemyHpIndicator;
