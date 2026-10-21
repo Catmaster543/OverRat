@@ -139,7 +139,7 @@ public class MainSceneFlipper : MonoBehaviour
         }
     }
 
-    public void RemovePlayer()
+    public void FinishCollecting()
     {
         Destroy(currentRat);
     }

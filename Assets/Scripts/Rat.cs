@@ -18,7 +18,7 @@ public class Rat : MonoBehaviour
     private bool biteTipActive = true;
     private Image enemyHpIndicator;
 
-    public List<Ingredient> collectedIngredients = new();
+    public List<GameObject> collectedIngredients = new();
 
     void Start()
     {
@@ -66,7 +66,7 @@ public class Rat : MonoBehaviour
             else if (hit.collider.gameObject.tag == "Ingredient")
             {
                 Debug.Log("Hit an ingredient");
-                collectedIngredients.Add(hit.collider.gameObject.GetComponent<Ingredient>());
+                collectedIngredients.Add(hit.collider.gameObject);
                 hit.collider.gameObject.SetActive(false);
             }
             else
