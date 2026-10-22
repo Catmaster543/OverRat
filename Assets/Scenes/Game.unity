@@ -1215,7 +1215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &411715757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2158,7 +2158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &979165307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3447,7 +3447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1589677903
 Transform:
   m_ObjectHideFlags: 0
@@ -4290,6 +4290,7 @@ GameObject:
   - component: {fileID: 1870728602}
   - component: {fileID: 1870728604}
   - component: {fileID: 1870728605}
+  - component: {fileID: 1870728606}
   m_Layer: 0
   m_Name: MainSceneManager
   m_TagString: SceneManager
@@ -4322,7 +4323,6 @@ MonoBehaviour:
   damageUpgradeText: {fileID: 55822146}
   rangeUpgradeText: {fileID: 1721816638}
   gameOverUI: {fileID: 1828575963}
-  collectTimeText: {fileID: 1891070286}
   invSlots:
   - {fileID: 71547747}
   - {fileID: 403951488}
@@ -4332,7 +4332,6 @@ MonoBehaviour:
   playerRange: 3
   people: []
   currentRat: {fileID: 0}
-  collectTime: 10
 --- !u!4 &1870728603
 Transform:
   m_ObjectHideFlags: 0
@@ -4377,6 +4376,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomIngredientsSpawner
   spawnArea: {fileID: 1493984881}
+--- !u!114 &1870728606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870728601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9f9d3d15f71414284f4c8ddf3f4e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PreGameManager
+  flipper: {fileID: 1870728602}
+  playerPrefab: {fileID: 4794547117609260116, guid: 4a8bed8fa132f9c4f82bfef2c890bf82, type: 3}
+  pregameCanvas: {fileID: 979165306}
+  playerSpawn: {fileID: 1601819025}
+  collectTimeText: {fileID: 1891070286}
+  collectTime: 15
 --- !u!1 &1891070284
 GameObject:
   m_ObjectHideFlags: 0
@@ -5163,30 +5180,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8446585035866508259, guid: 4a4d03c43381bdd4ba04f5050cc41660, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3695611903893485234}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a4d03c43381bdd4ba04f5050cc41660, type: 3}
---- !u!1 &3695611903893485233 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8446585035866508259, guid: 4a4d03c43381bdd4ba04f5050cc41660, type: 3}
-  m_PrefabInstance: {fileID: 3695611903893485232}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3695611903893485234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3695611903893485233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62a8d43b1093b6d44a53f0e826eb229e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WanderAi
-  moveSpeed: 3
-  rotSpeed: 100
 --- !u!1001 &8753573364753079547
 PrefabInstance:
   m_ObjectHideFlags: 0

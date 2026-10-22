@@ -23,7 +23,7 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI damageUpgradeText;
     [SerializeField] private TextMeshProUGUI rangeUpgradeText;
     [SerializeField] private GameObject gameOverUI;
-    [SerializeField] private TextMeshProUGUI collectTimeText;
+    
     public GameObject[] invSlots = new GameObject[3];
 
     [Header("Shared References")]
@@ -35,28 +35,21 @@ public class MainSceneFlipper : MonoBehaviour
     [Header("Live References")]
     public GameObject currentRat;
 
-    [Header("Settings")]
-    [SerializeField] private float collectTime;
+    
 
-    bool tick = false;
+    
 
     private int damageUpgradeCost = 10;
     private int rangeUpgradeCost = 10;
 
+    void Start()
+    {
+
+    }
+
     void Update()
     {
-        if (tick)
-        {
-            if (collectTime >= 0)
-            {
-                collectTime -= Time.deltaTime;
-                collectTimeText.text = ((int)collectTime).ToString();
-            }
-            else
-            {
-                Destroy(currentRat);
-            }
-        }
+        
     }
 
     public void SwitchToMain()
@@ -71,7 +64,6 @@ public class MainSceneFlipper : MonoBehaviour
             gameUI.SetActive(true);
             livesLeft--;
             biteTip.SetActive(true);
-            tick = true;
         }
     }
 
