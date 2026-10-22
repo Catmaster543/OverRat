@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 517401274980769227}
   - component: {fileID: 6716377000687662820}
   - component: {fileID: 7035363912140559758}
+  - component: {fileID: 1057004752424204176}
   m_Layer: 0
   m_Name: Person placeholder
   m_TagString: Person
@@ -128,3 +129,17 @@ MonoBehaviour:
   hp: 100
   walkSpeed: 2
   xpReward: 10
+--- !u!114 &1057004752424204176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446585035866508259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a8d43b1093b6d44a53f0e826eb229e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WanderAi
+  moveSpeed: 3
+  rotSpeed: 100
