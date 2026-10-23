@@ -8,5 +8,5 @@ public class Ingredient : MonoBehaviour
     public Sprite icon;
 
     public Color colorEffect;
-    public double smoothnessEff;
+    public float smoothnessEff;
 }

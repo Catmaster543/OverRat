@@ -446,6 +446,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2423793358225909433, guid: 5c7af70dfd2b4c2449f5993858ef7011, type: 3}
+      propertyPath: colorEffect.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423793358225909433, guid: 5c7af70dfd2b4c2449f5993858ef7011, type: 3}
+      propertyPath: colorEffect.g
+      value: 0.99437773
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423793358225909433, guid: 5c7af70dfd2b4c2449f5993858ef7011, type: 3}
+      propertyPath: colorEffect.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4532176096103911238, guid: 5c7af70dfd2b4c2449f5993858ef7011, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.73
@@ -682,6 +694,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2423793358225909433, guid: 5c7af70dfd2b4c2449f5993858ef7011, type: 3}
+      propertyPath: colorEffect.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423793358225909433, guid: 5c7af70dfd2b4c2449f5993858ef7011, type: 3}
+      propertyPath: colorEffect.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423793358225909433, guid: 5c7af70dfd2b4c2449f5993858ef7011, type: 3}
+      propertyPath: colorEffect.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4532176096103911238, guid: 5c7af70dfd2b4c2449f5993858ef7011, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.42
@@ -4990,6 +5014,8 @@ MonoBehaviour:
   lab: {fileID: 989961719}
   gameUi: {fileID: 979165306}
   uniUi: {fileID: 1840185375}
+  resultObj: {fileID: 1983084736}
+  resultMaterial: {fileID: 2100000, guid: 9853026d8cfa087479449d98a735e7c7, type: 2}
   collectTime: 15
 --- !u!1 &1891070284
 GameObject:

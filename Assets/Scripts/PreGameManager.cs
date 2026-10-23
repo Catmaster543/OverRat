@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +13,8 @@ public class PreGameManager : MonoBehaviour
     [SerializeField] private GameObject lab;
     [SerializeField] private GameObject gameUi;
     [SerializeField] private GameObject uniUi;
+    [SerializeField] private GameObject resultObj;
+    [SerializeField] private Material resultMaterial;
 
     [Header("Settings")]
     [SerializeField] private float collectTime;
@@ -41,6 +45,7 @@ public class PreGameManager : MonoBehaviour
                 gameUi.SetActive(false);
                 uniUi.SetActive(false);
                 Destroy(player);
+                SetResultColors();
             }
         }
     }
@@ -50,5 +55,24 @@ public class PreGameManager : MonoBehaviour
         GameObject spawnedPlayer = Instantiate(playerPrefab, playerSpawn);
         spawnedPlayer.GetComponent<Rat>().switcher = flipper;
         player = spawnedPlayer;
+    }
+
+    public void SetResultColors()
+    {
+        Debug.Log("Setting result colors");
+        List<Color> ingColors = new();
+        List<float> ingSmoothness = new();
+
+        Debug.Log($"Flipper collected items has this many rn: {flipper.collectedIngredients.Count}");
+
+        foreach (GameObject obj in flipper.collectedIngredients)
+        {
+            ingColors.Add(obj.GetComponent<Ingredient>().colorEffect);
+            Debug.Log($"Added the color of {obj.name}, the color of it is {obj.GetComponent<Ingredient>().colorEffect}");
+            ingSmoothness.Add(obj.GetComponent<Ingredient>().smoothnessEff);
+        }
+
+        resultMaterial.color = resultObj.GetComponent<InfColorResolver>().MatchUpColor(ingColors);
+        resultMaterial.SetFloat("_Glossiness", resultObj.GetComponent<InfColorResolver>().MatchUpSmoothness(ingSmoothness));
     }
 }

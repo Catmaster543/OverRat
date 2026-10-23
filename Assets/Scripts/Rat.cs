@@ -78,6 +78,7 @@ public class Rat : MonoBehaviour
                         currentSlot.UpdateIcon();
                         collectedIngredients.Add(hit.collider.gameObject);
                         hit.collider.gameObject.SetActive(false);
+                        switcher.collectedIngredients = collectedIngredients;
                         break;
                     }
                 }

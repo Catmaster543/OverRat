@@ -128,6 +128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   damageBonus: 8
   icon: {fileID: 0}
+  colorEffect: {r: 1, g: 0, b: 0, a: 0}
+  smoothnessEff: 1
 --- !u!54 &-5665496593329398711
 Rigidbody:
   m_ObjectHideFlags: 0
