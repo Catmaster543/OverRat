@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ public class RandomIngredientsSpawner : MonoBehaviour
     void Start()
     {
         switcher = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<MainSceneFlipper>();
-        //SpawnPeople();
+        //Spawn();
     }
 
     void Update()
@@ -25,7 +26,7 @@ public class RandomIngredientsSpawner : MonoBehaviour
 
     }
 
-    public void Spawn(List<GameObject> ingredients)
+    public IEnumerator Spawn(List<GameObject> ingredients)
     {
         foreach (GameObject obj in ingredients)
         {
@@ -35,7 +36,10 @@ public class RandomIngredientsSpawner : MonoBehaviour
             float z = Random.Range(b.min.z, b.max.z);
             float y = b.max.y + 1;
 
-            obj.transform.position = new Vector3(x, y, z);
+            GameObject spawnedObj = Instantiate(obj, new Vector3(x, y, z), Quaternion.identity);
+            spawnedObj.GetComponent<Rigidbody>().isKinematic = false;
+            spawnedObj.SetActive(true);
+            yield return new WaitForSeconds(1);
         }
     }
 }

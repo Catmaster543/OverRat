@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -23,7 +24,8 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI damageUpgradeText;
     [SerializeField] private TextMeshProUGUI rangeUpgradeText;
     [SerializeField] private GameObject gameOverUI;
-    
+    public GameObject lab;
+
     public GameObject[] invSlots = new GameObject[3];
 
     [Header("Shared References")]
@@ -31,13 +33,14 @@ public class MainSceneFlipper : MonoBehaviour
     public int playerDamage = 10;
     public int playerRange = 3;
     public List<GameObject> people;
+    public RandomIngredientsSpawner ingredientsSpawner;
 
     [Header("Live References")]
     public GameObject currentRat;
 
-    
 
-    
+    public List<GameObject> collectedIngredients = new();
+
 
     private int damageUpgradeCost = 10;
     private int rangeUpgradeCost = 10;
@@ -135,6 +138,18 @@ public class MainSceneFlipper : MonoBehaviour
     public void FinishCollecting()
     {
         Destroy(currentRat);
+    }
+
+    public void SpawnIngredients()
+    {
+        StartCoroutine(ingredientsSpawner.Spawn(collectedIngredients));
+    }
+
+    public void FinishIntroCutscene()
+    {
+        lab.SetActive(false);
+        
+        SwitchToSewer();
     }
 
     public void ReturnToMainMenu()

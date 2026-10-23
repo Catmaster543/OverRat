@@ -8,6 +8,9 @@ public class PreGameManager : MonoBehaviour
     public GameObject pregameCanvas;
     public Transform playerSpawn;
     [SerializeField] private TextMeshProUGUI collectTimeText;
+    [SerializeField] private GameObject lab;
+    [SerializeField] private GameObject gameUi;
+    [SerializeField] private GameObject uniUi;
 
     [Header("Settings")]
     [SerializeField] private float collectTime;
@@ -33,6 +36,10 @@ public class PreGameManager : MonoBehaviour
             }
             else
             {
+                tick = false;
+                lab.SetActive(true);
+                gameUi.SetActive(false);
+                uniUi.SetActive(false);
                 Destroy(player);
             }
         }
@@ -42,5 +49,6 @@ public class PreGameManager : MonoBehaviour
     {
         GameObject spawnedPlayer = Instantiate(playerPrefab, playerSpawn);
         spawnedPlayer.GetComponent<Rat>().switcher = flipper;
+        player = spawnedPlayer;
     }
 }

@@ -101,7 +101,8 @@ public class Rat : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        switcher.SwitchToSewer();
+        switcher.collectedIngredients = collectedIngredients;
+        //switcher.SwitchToSewer();
     }
 
     public IEnumerator DisableEnemyHpIndicator()
