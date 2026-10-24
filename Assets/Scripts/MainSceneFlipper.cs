@@ -26,6 +26,7 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI rangeUpgradeText;
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private Animator uniAnimator;
+    [SerializeField] private GameObject inventoryPanel;
     public GameObject lab;
 
     public GameObject[] invSlots = new GameObject[3];
@@ -43,6 +44,7 @@ public class MainSceneFlipper : MonoBehaviour
 
     public List<GameObject> collectedIngredients = new();
 
+    public Rat.GameStage gameStage;
 
     private int damageUpgradeCost = 10;
     private int rangeUpgradeCost = 10;
@@ -57,8 +59,9 @@ public class MainSceneFlipper : MonoBehaviour
         
     }
 
-    public IEnumerator SwitchToMain()
+    public IEnumerator SwitchToMain(bool showTip = false)
     {
+        biteTip.GetComponent<TextMeshProUGUI>().text = "Click to bite";
         if (livesLeft > 0)
         {
             FadeIn();
@@ -66,14 +69,19 @@ public class MainSceneFlipper : MonoBehaviour
             sewerUI.SetActive(false);
             GameObject player = Instantiate(playerPrefab, playerSpawn.transform.position, Quaternion.identity);
             player.GetComponent<Rat>().switcher = this;
+            player.GetComponent<Rat>().gameStage = gameStage;
             currentRat = player;
             sewerCam.SetActive(false);
             FadeOut();
             yield return new WaitForSeconds(0.9f);
+            inventoryPanel.SetActive(false);
             gameUI.SetActive(true);
             livesLeft--;
             biteTip.SetActive(true);
-            
+            if (showTip)
+            {
+                StartCoroutine(ShowTipWithDelay());
+            }
         }
     }
 
@@ -163,7 +171,8 @@ public class MainSceneFlipper : MonoBehaviour
     }
 
     public void FinishIntroCutscene()
-    {   
+    {
+        gameStage = Rat.GameStage.Game;
         StartCoroutine(SwitchToSewer(lab));
     }
 
@@ -177,9 +186,27 @@ public class MainSceneFlipper : MonoBehaviour
         uniAnimator.SetTrigger("FadeOut");
     }
 
+    public void StopFade()
+    {
+        uniAnimator.SetTrigger("StopFade");
+    }
+
     public void PlayButtonPress()
     {
         StartCoroutine(SwitchToMain());
+    }
+
+    public IEnumerator ShowTipWithDelay()
+    {
+        yield return new WaitForSeconds(2);
+        if (currentRat.GetComponent<Rat>().ActivateBiteTip())
+        {
+            biteTip.SetActive(true);
+        }
+        else
+        {
+            biteTip.SetActive(false);
+        }
     }
 
     public void ReturnToMainMenu()

@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -27,6 +28,7 @@ public class PreGameManager : MonoBehaviour
         SpawnPlayer();
         pregameCanvas.SetActive(true);
         tick = true;
+        StartCoroutine(flipper.ShowTipWithDelay());
     }
 
     void Update()
@@ -41,11 +43,7 @@ public class PreGameManager : MonoBehaviour
             else
             {
                 tick = false;
-                lab.SetActive(true);
-                gameUi.SetActive(false);
-                xpCounter.SetActive(false);
-                Destroy(player);
-                SetResultColors();
+                StartCoroutine(BeginIntroCutscene());
             }
         }
     }
@@ -55,6 +53,7 @@ public class PreGameManager : MonoBehaviour
         GameObject spawnedPlayer = Instantiate(playerPrefab, playerSpawn);
         spawnedPlayer.GetComponent<Rat>().switcher = flipper;
         player = spawnedPlayer;
+        flipper.currentRat = spawnedPlayer;
     }
 
     public void SetResultColors()
@@ -74,5 +73,17 @@ public class PreGameManager : MonoBehaviour
 
         resultMaterial.color = resultObj.GetComponent<InfColorResolver>().MatchUpColor(ingColors);
         resultMaterial.SetFloat("_Glossiness", resultObj.GetComponent<InfColorResolver>().MatchUpSmoothness(ingSmoothness));
+    }
+
+    IEnumerator BeginIntroCutscene()
+    {
+        flipper.FadeIn();
+        yield return new WaitForSeconds(0.5f);
+        lab.SetActive(true);
+        gameUi.SetActive(false);
+        xpCounter.SetActive(false);
+        Destroy(player);
+        flipper.StopFade();
+        SetResultColors();
     }
 }

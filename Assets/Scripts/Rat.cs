@@ -20,6 +20,14 @@ public class Rat : MonoBehaviour
 
     public List<GameObject> collectedIngredients = new();
 
+    public GameStage gameStage;
+
+    public enum GameStage
+    {
+        PreGame,
+        Game
+    }
+
     void Start()
     {
         enemyHpIndicator = switcher.enemyHpIndicator;
@@ -36,6 +44,7 @@ public class Rat : MonoBehaviour
         if (biteTipActive)
         {
             switcher.HideBiteTip();
+            StopCoroutine(switcher.ShowTipWithDelay());
             biteTipActive = false;
         }
         if (clocker >= biteCd)
@@ -51,7 +60,7 @@ public class Rat : MonoBehaviour
         Debug.Log("Shot a ray");
         if (Physics.Raycast(ray, out RaycastHit hit, range))
         {
-            if (hit.collider.gameObject.tag == "Person")
+            if (hit.collider.gameObject.tag == "Person" && gameStage == GameStage.Game)
             {
                 Debug.Log("Hit a person (aka. valid target)");
                 Person person = hit.collider.gameObject.GetComponent<Person>();
@@ -63,7 +72,7 @@ public class Rat : MonoBehaviour
                 Debug.Log("Starting a new coroutine");
                 StartCoroutine(DisableEnemyHpIndicator());
             }
-            else if (hit.collider.gameObject.tag == "Ingredient")
+            else if (hit.collider.gameObject.tag == "Ingredient" && gameStage == GameStage.PreGame)
             {
                 bool found = false;
                 Debug.Log("Hit an ingredient");
@@ -112,5 +121,17 @@ public class Rat : MonoBehaviour
         yield return new WaitForSeconds(2);
         Debug.Log("2s passed without interuption, hiding the indicator.");
         enemyHpIndicator.gameObject.SetActive(false);
+    }
+
+    public bool ActivateBiteTip()
+    {
+        if (biteTipActive)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
