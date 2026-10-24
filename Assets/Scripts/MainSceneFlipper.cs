@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
@@ -24,6 +25,7 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private TextMeshProUGUI damageUpgradeText;
     [SerializeField] private TextMeshProUGUI rangeUpgradeText;
     [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private Animator uniAnimator;
     public GameObject lab;
 
     public GameObject[] invSlots = new GameObject[3];
@@ -55,25 +57,32 @@ public class MainSceneFlipper : MonoBehaviour
         
     }
 
-    public void SwitchToMain()
+    public IEnumerator SwitchToMain()
     {
         if (livesLeft > 0)
         {
+            FadeIn();
+            yield return new WaitForSeconds(0.9f);
             sewerUI.SetActive(false);
             GameObject player = Instantiate(playerPrefab, playerSpawn.transform.position, Quaternion.identity);
             player.GetComponent<Rat>().switcher = this;
             currentRat = player;
             sewerCam.SetActive(false);
+            FadeOut();
+            yield return new WaitForSeconds(0.9f);
             gameUI.SetActive(true);
             livesLeft--;
             biteTip.SetActive(true);
+            
         }
     }
 
-    public void SwitchToSewer()
+    public IEnumerator SwitchToSewer(GameObject objToTurnOff = null)
     {
         if (livesLeft <= 0)
         {
+            FadeIn();
+            yield return new WaitForSeconds(0.9f);
             sewerCam.SetActive(true);
             gameOverUI.SetActive(true);
             TextMeshProUGUI gameOverText = gameOverUI.GetComponentInChildren<TextMeshProUGUI>();
@@ -81,10 +90,18 @@ public class MainSceneFlipper : MonoBehaviour
         }
         else
         {
+            FadeIn();
+            yield return new WaitForSeconds(0.9f);
+            if (objToTurnOff != null)
+            {
+                objToTurnOff.SetActive(false);
+            }
             sewerCam.SetActive(true);
             sewerUI.SetActive(true);
             gameUI.SetActive(false);
             biteTip.SetActive(false);
+            FadeOut();
+            yield return new WaitForSeconds(0.9f);
             livesText.text = $"Lives left: {livesLeft}";
         }
     }
@@ -146,10 +163,23 @@ public class MainSceneFlipper : MonoBehaviour
     }
 
     public void FinishIntroCutscene()
+    {   
+        StartCoroutine(SwitchToSewer(lab));
+    }
+
+    public void FadeIn()
     {
-        lab.SetActive(false);
-        
-        SwitchToSewer();
+        uniAnimator.SetTrigger("FadeIn");
+    }
+
+    public void FadeOut()
+    {
+        uniAnimator.SetTrigger("FadeOut");
+    }
+
+    public void PlayButtonPress()
+    {
+        StartCoroutine(SwitchToMain());
     }
 
     public void ReturnToMainMenu()

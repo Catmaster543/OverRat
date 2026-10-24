@@ -7,20 +7,16 @@ public class InfColorResolver : MonoBehaviour
     
     public Color MatchUpColor(List<Color> coloursSource)
     {
-        Debug.Log($"Matching up colors, colours source has this many items: {coloursSource.Count}");
         Color finalColor = new();
 
         foreach (Color color in coloursSource)
         {
-            Debug.Log($"Current color is {color.r}, the result so far {finalColor.r}");
             if (color.r >= finalColor.r)
             {
-                Debug.Log("Current r color was larger");
                 finalColor.r += color.r / 2;
             }
             else if (color.r <= finalColor.r)
             {
-                Debug.Log("Current r color was smaller");
                 finalColor.r -= color.r / 2;
             }
             if (color.g >= finalColor.g)

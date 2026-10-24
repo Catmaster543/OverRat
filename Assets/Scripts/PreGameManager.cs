@@ -12,7 +12,7 @@ public class PreGameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI collectTimeText;
     [SerializeField] private GameObject lab;
     [SerializeField] private GameObject gameUi;
-    [SerializeField] private GameObject uniUi;
+    [SerializeField] private GameObject xpCounter;
     [SerializeField] private GameObject resultObj;
     [SerializeField] private Material resultMaterial;
 
@@ -43,7 +43,7 @@ public class PreGameManager : MonoBehaviour
                 tick = false;
                 lab.SetActive(true);
                 gameUi.SetActive(false);
-                uniUi.SetActive(false);
+                xpCounter.SetActive(false);
                 Destroy(player);
                 SetResultColors();
             }
