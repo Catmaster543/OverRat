@@ -37,6 +37,8 @@ public class MainSceneFlipper : MonoBehaviour
     public int playerRange = 3;
     public List<GameObject> people;
     public RandomIngredientsSpawner ingredientsSpawner;
+    public GameObject infoObj;
+    public TextMeshProUGUI infoText;
 
     [Header("Live References")]
     public GameObject currentRat;
@@ -66,6 +68,7 @@ public class MainSceneFlipper : MonoBehaviour
         {
             FadeIn();
             yield return new WaitForSeconds(0.9f);
+            xpText.gameObject.SetActive(true);
             sewerUI.SetActive(false);
             GameObject player = Instantiate(playerPrefab, playerSpawn.transform.position, Quaternion.identity);
             player.GetComponent<Rat>().switcher = this;
@@ -207,6 +210,14 @@ public class MainSceneFlipper : MonoBehaviour
         {
             biteTip.SetActive(false);
         }
+    }
+
+    public IEnumerator ShowPickepUpInfo(GameObject ingredient)
+    {
+        infoText.text = $"Picked up {ingredient.name}";
+        infoObj.GetComponent<Animator>().SetTrigger("PopUp");
+        yield return new WaitForSeconds(1.5f);
+        infoObj.GetComponent<Animator>().SetTrigger("PopOut");
     }
 
     public void ReturnToMainMenu()

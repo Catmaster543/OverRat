@@ -13,7 +13,6 @@ public class PreGameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI collectTimeText;
     [SerializeField] private GameObject lab;
     [SerializeField] private GameObject gameUi;
-    [SerializeField] private GameObject xpCounter;
     [SerializeField] private GameObject resultObj;
     [SerializeField] private Material resultMaterial;
 
@@ -79,9 +78,9 @@ public class PreGameManager : MonoBehaviour
     {
         flipper.FadeIn();
         yield return new WaitForSeconds(0.5f);
+        collectTimeText.gameObject.SetActive(false);
         lab.SetActive(true);
         gameUi.SetActive(false);
-        xpCounter.SetActive(false);
         Destroy(player);
         flipper.StopFade();
         SetResultColors();

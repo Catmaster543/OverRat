@@ -88,6 +88,7 @@ public class Rat : MonoBehaviour
                         collectedIngredients.Add(hit.collider.gameObject);
                         hit.collider.gameObject.SetActive(false);
                         switcher.collectedIngredients = collectedIngredients;
+                        StartCoroutine(switcher.ShowPickepUpInfo(hit.collider.gameObject));
                         break;
                     }
                 }
