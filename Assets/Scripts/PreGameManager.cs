@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -27,6 +27,7 @@ public class PreGameManager : MonoBehaviour
         SpawnPlayer();
         pregameCanvas.SetActive(true);
         tick = true;
+        flipper.objectiveText.text = "● Collect ingredients.";
         StartCoroutine(flipper.ShowTipWithDelay());
     }
 

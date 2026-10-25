@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
@@ -39,6 +39,7 @@ public class MainSceneFlipper : MonoBehaviour
     public RandomIngredientsSpawner ingredientsSpawner;
     public GameObject infoObj;
     public TextMeshProUGUI infoText;
+    public TextMeshProUGUI objectiveText;
 
     [Header("Live References")]
     public GameObject currentRat;
@@ -176,6 +177,7 @@ public class MainSceneFlipper : MonoBehaviour
     public void FinishIntroCutscene()
     {
         gameStage = Rat.GameStage.Game;
+        objectiveText.text = "● Infect everyone.";
         StartCoroutine(SwitchToSewer(lab));
     }
 
