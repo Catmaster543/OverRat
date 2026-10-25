@@ -27,6 +27,7 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private Animator uniAnimator;
     [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private GameObject killBox;
     public GameObject lab;
 
     public GameObject[] invSlots = new GameObject[3];
@@ -178,6 +179,7 @@ public class MainSceneFlipper : MonoBehaviour
     {
         gameStage = Rat.GameStage.Game;
         objectiveText.text = "● Infect everyone.";
+        killBox.SetActive(true);
         StartCoroutine(SwitchToSewer(lab));
     }
 
