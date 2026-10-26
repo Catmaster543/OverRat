@@ -118,6 +118,16 @@ public class MainSceneFlipper : MonoBehaviour
         }
     }
 
+    public void SwitchToMainV()
+    {
+        StartCoroutine(SwitchToMain());
+    }
+
+    public void SwitchToSewerV()
+    {
+        StartCoroutine(SwitchToSewer());
+    }
+
     public void HideBiteTip()
     {
         biteTip.SetActive(false);
