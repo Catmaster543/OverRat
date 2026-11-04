@@ -97,6 +97,11 @@ public class Rat : MonoBehaviour
                     Debug.Log("Inventory full, unable to pick up!");
                 }
             }
+            else if (hit.collider.gameObject.tag == "NPC")
+            {
+                Debug.Log("Hit an NPC, starting dialogue.");
+                GameObject.FindGameObjectWithTag("SceneManager").GetComponent<MisterDialogue>().StartDialogue();
+            }
             else
             {
                 Debug.Log("Hit something else");

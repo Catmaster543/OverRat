@@ -9,6 +9,7 @@ TagManager:
   - SewerRat
   - SceneManager
   - Ingredient
+  - NPC
   layers:
   - Default
   - TransparentFX
