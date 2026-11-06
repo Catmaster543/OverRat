@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6664450146531239728}
   m_Layer: 0
   m_Name: PlayerPlaceHolder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,8 @@ MonoBehaviour:
   damage: 10
   range: 3
   biteCd: 1
+  collectedIngredients: []
+  gameStage: 0
 --- !u!1 &5042760851903560893
 GameObject:
   m_ObjectHideFlags: 0
