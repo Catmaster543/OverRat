@@ -27,6 +27,7 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private Animator uniAnimator;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject killBox;
+    [SerializeField] private GameObject sacrificalRatsGroup;
     public GameObject lab;
 
     public GameObject[] invSlots = new GameObject[3];
@@ -69,9 +70,10 @@ public class MainSceneFlipper : MonoBehaviour
         {
             FadeIn();
             yield return new WaitForSeconds(0.9f);
+            sacrificalRatsGroup.SetActive(false);
             xpText.gameObject.SetActive(true);
             sewerUI.SetActive(false);
-            GameObject player = Instantiate(playerPrefab, playerSpawn.transform.position, Quaternion.identity);
+            GameObject player = Instantiate(playerPrefab, playerSpawn.transform.position, playerSpawn.transform.rotation);
             player.GetComponent<Rat>().switcher = this;
             player.GetComponent<Rat>().gameStage = gameStage;
             currentRat = player;
@@ -108,6 +110,7 @@ public class MainSceneFlipper : MonoBehaviour
             {
                 objToTurnOff.SetActive(false);
             }
+            sacrificalRatsGroup.SetActive(true);
             sewerCam.SetActive(true);
             sewerUI.SetActive(true);
             gameUI.SetActive(false);
