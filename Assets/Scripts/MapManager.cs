@@ -1,9 +1,13 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MapManager : MonoBehaviour
 {
-    public GameObject place1;
-    public GameObject place2;
+    public MapTPSpot place1;
+    public MapTPSpot place2;
+
+    public Animator uniAnimator;
 
     float time;
 
@@ -15,23 +19,36 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    public void SwitchToOTher(GameObject originObj, GameObject player)
+    public void SwitchToOTher(MapTPSpot originObj, GameObject player)
     {
-        Debug.Log("Checking time since last tp");
         if (time >= 3)
         {
-            Debug.Log($"Time fine, tp the player ({player}) from {originObj}");
             time = 0;
             if (originObj == place1)
             {
-                Debug.Log("Place is number 1, tp the player there.");
-                player.transform.position = new Vector3(place2.transform.position.x, place2.transform.position.y, place2.transform.position.z);
+                CharacterController controller = player.GetComponent<CharacterController>();
+
+                StartCoroutine(TeleportPlayer(place2.resultTransform, controller));
             }
             else if (originObj == place2)
             {
-                Debug.Log("Place is number 2, tp the player there.");
-                player.transform.position = new Vector3(place1.transform.position.x, place1.transform.position.y, place1.transform.position.z);
+                CharacterController controller = player.GetComponent<CharacterController>();
+
+                StartCoroutine(TeleportPlayer(place1.resultTransform, controller));
             }
         }
+    }
+
+    public IEnumerator TeleportPlayer(Transform destination, CharacterController controller)
+    {
+        controller.enabled = false;
+
+        uniAnimator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(1.5f);
+        uniAnimator.SetTrigger("FadeOut");
+        controller.gameObject.transform.position = destination.position;
+        controller.gameObject.transform.rotation = destination.rotation;
+        controller.enabled = true;
+        yield return new WaitForSeconds(1.5f);
     }
 }
