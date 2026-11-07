@@ -28,6 +28,7 @@ public class MainSceneFlipper : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject killBox;
     [SerializeField] private GameObject sacrificalRatsGroup;
+    [SerializeField] Animator[] sacrificalRatsAnimator;
     public GameObject lab;
 
     public GameObject[] invSlots = new GameObject[3];
@@ -70,6 +71,8 @@ public class MainSceneFlipper : MonoBehaviour
         biteTip.GetComponent<TextMeshProUGUI>().text = "Click to bite";
         if (livesLeft > 0)
         {
+            sacrificalRatsAnimator[livesLeft - 1].SetTrigger("Cross");
+            yield return new WaitForSeconds(1.7f);
             FadeIn();
             yield return new WaitForSeconds(0.9f);
             sacrificalRatsGroup.SetActive(false);
@@ -113,6 +116,7 @@ public class MainSceneFlipper : MonoBehaviour
                 objToTurnOff.SetActive(false);
             }
             sacrificalRatsGroup.SetActive(true);
+            sacrificalRatsAnimator[livesLeft - 1].SetTrigger("ReadyUp");
             sewerCam.SetActive(true);
             sewerUI.SetActive(true);
             gameUI.SetActive(false);
@@ -191,6 +195,7 @@ public class MainSceneFlipper : MonoBehaviour
 
     public void FinishIntroCutscene()
     {
+
         gameStage = Rat.GameStage.Game;
         objectiveText.text = "● Infect everyone.";
         killBox.SetActive(true);
