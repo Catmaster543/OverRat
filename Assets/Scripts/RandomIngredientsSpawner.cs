@@ -39,6 +39,7 @@ public class RandomIngredientsSpawner : MonoBehaviour
             GameObject spawnedObj = Instantiate(obj, new Vector3(x, y, z), Quaternion.identity);
             spawnedObj.GetComponent<Rigidbody>().isKinematic = false;
             spawnedObj.SetActive(true);
+            switcher.spawnedIngredients.Add(spawnedObj);
             yield return new WaitForSeconds(1);
         }
     }

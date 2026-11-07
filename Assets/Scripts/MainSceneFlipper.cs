@@ -53,6 +53,8 @@ public class MainSceneFlipper : MonoBehaviour
     private int damageUpgradeCost = 10;
     private int rangeUpgradeCost = 10;
 
+    public List<GameObject> spawnedIngredients = new();
+
     void Start()
     {
 
@@ -184,7 +186,7 @@ public class MainSceneFlipper : MonoBehaviour
 
     public void SpawnIngredients()
     {
-        StartCoroutine(ingredientsSpawner.Spawn(collectedIngredients));
+       StartCoroutine(ingredientsSpawner.Spawn(collectedIngredients));
     }
 
     public void FinishIntroCutscene()
@@ -192,6 +194,10 @@ public class MainSceneFlipper : MonoBehaviour
         gameStage = Rat.GameStage.Game;
         objectiveText.text = "● Infect everyone.";
         killBox.SetActive(true);
+        foreach (GameObject obj in spawnedIngredients)
+        {
+            Destroy(obj);
+        }
         StartCoroutine(SwitchToSewer(lab));
     }
 
