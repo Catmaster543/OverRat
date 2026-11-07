@@ -290,6 +290,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -6060934540939853529, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5572266905149518935, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
       propertyPath: m_Name
       value: Rat
@@ -302,9 +310,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1383268781822205795, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421855707862594039, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803436535603912181, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6657560127643677590, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657560127643677590, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
