@@ -24,6 +24,7 @@ public class Rat : MonoBehaviour
 
     public enum GameStage
     {
+        Intro,
         PreGame,
         Game
     }
@@ -118,6 +119,10 @@ public class Rat : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         switcher.collectedIngredients = collectedIngredients;
+        if (gameStage == GameStage.Intro)
+        {
+            switcher.RespawnPlayer();
+        }
         if (gameStage == GameStage.Game)
         {
             switcher.SwitchToSewerV();

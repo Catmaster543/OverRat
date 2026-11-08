@@ -55,6 +55,7 @@ public class PreGameManager : MonoBehaviour
         invPanel.SetActive(true);
         tick = true;
         tpSpot1.SetActive(true);
+        flipper.gameStage = Rat.GameStage.PreGame;
         StartCoroutine(flipper.ShowTipWithDelay());
     }
 

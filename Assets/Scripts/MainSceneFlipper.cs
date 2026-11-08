@@ -247,6 +247,22 @@ public class MainSceneFlipper : MonoBehaviour
         infoObj.GetComponent<Animator>().SetTrigger("PopOut");
     }
 
+    public void RespawnPlayer()
+    {
+        StartCoroutine(RespawnPlayerC());
+    }
+
+    public IEnumerator RespawnPlayerC()
+    {
+        FadeIn();
+        yield return new WaitForSeconds(1.5f);
+        GameObject player = Instantiate(playerPrefab, playerSpawn.transform.position, playerSpawn.transform.rotation);
+        player.GetComponent<Rat>().switcher = this;
+        currentRat = player;
+        FadeOut();
+        yield return new WaitForSeconds(0.9f);
+    }
+
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene("Main Menu");
