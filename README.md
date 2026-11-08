@@ -3,7 +3,8 @@ In this game, you **play as a rat carrying an uknown disease, that will cause th
 
 ## Current features:
 - **Fully working player movement system** - you can move around, rotate your camera and even make tiny cute jumps!
-- **Pre-game & game phases**
+- **Intro, Pre-game & game phases**
+  - Intro stage is quite simple really, all you have to do is take a look around the newly added sewers!
   - During the pre-game you can collect ingredients around the map with a set time
   - In the game you "bite" people (for now)
 - **Working biting/damage & hp system** - you can bite dummy targets for now that have a set amout of hp and if you cause enough damage you kill them (for now).
@@ -16,12 +17,41 @@ In this game, you **play as a rat carrying an uknown disease, that will cause th
 - **Main menu** - I've implemented a super simple main menu, which allows you to either enter the game or quit.
 - **Random NPC movement** - spawned in NPC move around the map
 - **Brewing cutscene** - after you finish collecting the ingredients they will all be dropped into the cooking pot and a cube with color mixed from what you've picked up will appear. This will be replaced in the future
+- **Talkable ol'rat ghost NPC** - have a chat with him, you can find him in the sewers.
 - **Game ending conditions and menus for them** - if you run out of lives, you'll get the game over menu. If you manage to bite every person that has been spawned in you win!
+
+## Latest added features (what was added this update?)
+- The **sewers**!
+  - An underground map extension with some spoooky hallways!
+  - Dimly, if at all lit
+  - First real and scary dangerous object - water. Don't touch it.
+  - Spooky
+- **The ol'rat Ghost NPC**
+  - Go have a chat with him, that is if you find him :p
+- **Dialogue system** - used by the ghost
+- **Walkable tp spots**
+  - In other terms - two paired places you can walk one side into, to exit on the other
+  - In this case used for the transfer between sewers and the main map (aka. surface)!
+- **Sewers migration**
+  - Moved the brewing cutscene to the sewers
+  - Moved the game sub-menu to the sewers
+  - Moved player spawn there as well
+- **More animations!**
+  - Added ready and crossing the plank animations for the sacrifical rats
+  - Added ol'rat ghosts appear and idle (=floating) animation
+  - Added fade in/out animations for the main menu
+- **Lighting**
+  - Switched the lighting system to light probes from lightmap
+  - Baked the lighting into the game
+  - Allows for the sewers to be dark, while the surface remain sunny
+- **Other QoL and fixed features**
+  - Added respawns during the intro and pregame stage
+  - Added exit text in the sewers to indicate the exit
+  - Fixed many many bugs
 
 ## Planned features
 - Proper models for people
 - A way larger map
-- The sewer place itself
 - Proper models for the environment
 - Entire graphics-side overhaul
 - Deratizators chasing you down after you openly bite someone
@@ -36,6 +66,7 @@ Collect ingredients and then bite everyone on the map!
 - Camera movement - hover around with your mouse just like in any other games
 - Biting - Left Mouse Button click
 - Grabbing - Left Mouse Button click
+- Talking to NPCs - Left Mouse Button click
 
 ### AI Usage declaration
 No generative AI has been used.
