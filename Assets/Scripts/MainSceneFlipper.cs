@@ -43,6 +43,7 @@ public class MainSceneFlipper : MonoBehaviour
     public GameObject infoObj;
     public TextMeshProUGUI infoText;
     public TextMeshProUGUI objectiveText;
+    public bool showingPickUp;
 
     [Header("Live References")]
     public GameObject currentRat;
@@ -196,7 +197,6 @@ public class MainSceneFlipper : MonoBehaviour
 
     public void FinishIntroCutscene()
     {
-
         gameStage = Rat.GameStage.Game;
         objectiveText.text = "● Infect everyone.";
         killBox.SetActive(true);
@@ -242,10 +242,18 @@ public class MainSceneFlipper : MonoBehaviour
 
     public IEnumerator ShowPickepUpInfo(GameObject ingredient)
     {
+        showingPickUp = true;
         infoText.text = $"Picked up {ingredient.name}";
         infoObj.GetComponent<Animator>().SetTrigger("PopUp");
         yield return new WaitForSeconds(1.5f);
         infoObj.GetComponent<Animator>().SetTrigger("PopOut");
+        yield return new WaitForSeconds(1);
+        showingPickUp = false;
+    }
+
+    public void UpdatePickedUpInfo(GameObject ingredient)
+    {
+        infoText.text = $"Picked up {ingredient.name}"; ;
     }
 
     public void RespawnPlayer()
