@@ -14,6 +14,7 @@ public class MainSceneFlipper : MonoBehaviour
     public int playerXp;
 
     [Header("Scene References")]
+    [SerializeField] private PreGameManager preGameManager;
     [SerializeField] private GameObject sewerCam;
     [SerializeField] private GameObject playerSpawn;
     [SerializeField] private GameObject sewerUI;
@@ -257,7 +258,15 @@ public class MainSceneFlipper : MonoBehaviour
         FadeIn();
         yield return new WaitForSeconds(1.5f);
         GameObject player = Instantiate(playerPrefab, playerSpawn.transform.position, playerSpawn.transform.rotation);
-        player.GetComponent<Rat>().switcher = this;
+        Rat newRat = player.GetComponent<Rat>();
+        newRat.switcher = this;
+        newRat.gameStage = gameStage;
+        preGameManager.player = player;
+        foreach (GameObject obj in invSlots)
+        {
+            obj.GetComponent<Slot>().currentItem = null;
+            obj.GetComponent<Slot>().UpdateIcon();
+        }
         currentRat = player;
         FadeOut();
         yield return new WaitForSeconds(0.9f);

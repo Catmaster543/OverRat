@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class Rat : MonoBehaviour
 {
     public MainSceneFlipper switcher;
+    public PreGameManager preGManager;
     public float damage;
     public float range;
     public float biteCd;
@@ -21,6 +22,7 @@ public class Rat : MonoBehaviour
     public List<GameObject> collectedIngredients = new();
 
     public GameStage gameStage;
+    public bool forceKill;
 
     public enum GameStage
     {
@@ -119,7 +121,7 @@ public class Rat : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         switcher.collectedIngredients = collectedIngredients;
-        if (gameStage == GameStage.Intro)
+        if (gameStage == GameStage.Intro || gameStage == GameStage.PreGame && !forceKill)
         {
             switcher.RespawnPlayer();
         }
@@ -127,6 +129,7 @@ public class Rat : MonoBehaviour
         {
             switcher.SwitchToSewerV();
         }
+        forceKill = false;
     }
 
     public IEnumerator DisableEnemyHpIndicator()

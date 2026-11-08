@@ -18,13 +18,13 @@ public class PreGameManager : MonoBehaviour
     [SerializeField] private GameObject infoText;
     [SerializeField] private GameObject invPanel;
     [SerializeField] private GameObject tpSpot1;
+    public GameObject player;
 
     [Header("Settings")]
     [SerializeField] private float collectTime;
 
     bool tick = false;
-    GameObject player;
-
+    
     void Start()
     {
         SpawnPlayer();
@@ -62,7 +62,10 @@ public class PreGameManager : MonoBehaviour
     public void SpawnPlayer()
     {
         GameObject spawnedPlayer = Instantiate(playerPrefab, playerSpawn);
-        spawnedPlayer.GetComponent<Rat>().switcher = flipper;
+        Rat currentRat = spawnedPlayer.GetComponent<Rat>();
+        currentRat.switcher = flipper;
+        currentRat.gameStage = Rat.GameStage.PreGame;
+        flipper.gameStage = Rat.GameStage.PreGame;
         player = spawnedPlayer;
         flipper.currentRat = spawnedPlayer;
     }
@@ -93,6 +96,7 @@ public class PreGameManager : MonoBehaviour
         collectTimeText.gameObject.SetActive(false);
         lab.SetActive(true);
         gameUi.SetActive(false);
+        player.GetComponent<Rat>().forceKill = true;
         Destroy(player);
         flipper.StopFade();
         SetResultColors();

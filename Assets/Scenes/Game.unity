@@ -10643,6 +10643,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 4794547117609260116, guid: 4a8bed8fa132f9c4f82bfef2c890bf82, type: 3}
   livesLeft: 5
   playerXp: 0
+  preGameManager: {fileID: 1870728606}
   sewerCam: {fileID: 1589677902}
   playerSpawn: {fileID: 1601819024}
   sewerUI: {fileID: 411715756}
@@ -10748,7 +10749,8 @@ MonoBehaviour:
   infoText: {fileID: 577950493}
   invPanel: {fileID: 590720019}
   tpSpot1: {fileID: 136141300}
-  collectTime: 999
+  player: {fileID: 0}
+  collectTime: 100
 --- !u!114 &1870728607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12118,11 +12120,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1057004752424204176, guid: 4a4d03c43381bdd4ba04f5050cc41660, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7772694039318487281, guid: 4a4d03c43381bdd4ba04f5050cc41660, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.38
+      value: -10.022
       objectReference: {fileID: 0}
     - target: {fileID: 7772694039318487281, guid: 4a4d03c43381bdd4ba04f5050cc41660, type: 3}
       propertyPath: m_LocalPosition.y
