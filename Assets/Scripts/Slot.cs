@@ -13,20 +13,23 @@ public class Slot : MonoBehaviour
 
     public void UpdateIcon()
     {
-        if (currentItem != null)
+        if (iconDisplay != null)
         {
-            if (currentItem.GetComponent<Ingredient>().icon != null)
+            if (currentItem != null)
             {
-                iconDisplay.sprite = currentItem.GetComponent<Ingredient>().icon;
+                if (currentItem.GetComponent<Ingredient>().icon != null)
+                {
+                    iconDisplay.sprite = currentItem.GetComponent<Ingredient>().icon;
+                }
+                else
+                {
+                    Debug.LogError($"Ingredient {currentItem.name} has no icon set!");
+                }
             }
             else
             {
-                Debug.LogError($"Ingredient {currentItem.name} has no icon set!");
+                iconDisplay.sprite = null;
             }
-        }
-        else
-        {
-            iconDisplay.sprite = null;
         }
     }
 }

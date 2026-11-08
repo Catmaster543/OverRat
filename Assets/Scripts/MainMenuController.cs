@@ -1,25 +1,32 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    public Animator fadeAnimator;
 
     public void Play()
     {
-        SceneManager.LoadScene("Game");
+        StartCoroutine(PlayC());
     }
 
     public void Quit()
     {
+        StartCoroutine(QuitC());
+    }
+
+    public IEnumerator PlayC()
+    {
+        fadeAnimator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(1.2f);
+        SceneManager.LoadScene("Game");
+    }
+
+    public IEnumerator QuitC()
+    {
+        fadeAnimator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(1.2f);
         Application.Quit();
     }
 }

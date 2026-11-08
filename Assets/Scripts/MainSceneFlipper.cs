@@ -59,7 +59,7 @@ public class MainSceneFlipper : MonoBehaviour
 
     void Start()
     {
-
+        uniAnimator.Play("FadeOut");
     }
 
     void Update()
