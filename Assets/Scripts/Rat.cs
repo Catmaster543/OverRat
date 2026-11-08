@@ -100,7 +100,7 @@ public class Rat : MonoBehaviour
             else if (hit.collider.gameObject.tag == "NPC")
             {
                 Debug.Log("Hit an NPC, starting dialogue.");
-                GameObject.FindGameObjectWithTag("SceneManager").GetComponent<MisterDialogue>().StartDialogue();
+                GameObject.FindGameObjectWithTag("SceneManager").GetComponent<MisterDialogue>().StartDialogue(hit.collider.gameObject.GetComponent<Speaker>().lines, hit.collider.gameObject.GetComponent<Speaker>());
             }
             else
             {

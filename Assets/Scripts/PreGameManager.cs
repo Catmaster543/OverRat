@@ -15,6 +15,9 @@ public class PreGameManager : MonoBehaviour
     [SerializeField] private GameObject gameUi;
     [SerializeField] private GameObject resultObj;
     [SerializeField] private Material resultMaterial;
+    [SerializeField] private GameObject infoText;
+    [SerializeField] private GameObject invPanel;
+    [SerializeField] private GameObject tpSpot1;
 
     [Header("Settings")]
     [SerializeField] private float collectTime;
@@ -25,10 +28,6 @@ public class PreGameManager : MonoBehaviour
     void Start()
     {
         SpawnPlayer();
-        pregameCanvas.SetActive(true);
-        tick = true;
-        flipper.objectiveText.text = "● Collect ingredients.";
-        StartCoroutine(flipper.ShowTipWithDelay());
     }
 
     void Update()
@@ -46,6 +45,17 @@ public class PreGameManager : MonoBehaviour
                 StartCoroutine(BeginIntroCutscene());
             }
         }
+    }
+
+    public void StartThePreGame()
+    {
+        pregameCanvas.SetActive(true);
+        collectTimeText.gameObject.SetActive(true);
+        infoText.SetActive(true);
+        invPanel.SetActive(true);
+        tick = true;
+        tpSpot1.SetActive(true);
+        StartCoroutine(flipper.ShowTipWithDelay());
     }
 
     public void SpawnPlayer()

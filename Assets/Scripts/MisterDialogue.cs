@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
+using Unity.Collections.LowLevel.Unsafe;
 
 [System.Serializable]
 public class MisterDialogue : MonoBehaviour
@@ -37,6 +37,7 @@ public class MisterDialogue : MonoBehaviour
     private bool isTyping;
     public bool choicesOn;
     bool active;
+    public Speaker currentSender;
 
     void Start()
     {
@@ -62,7 +63,7 @@ public class MisterDialogue : MonoBehaviour
 
 
     // The auto start method used on the beggining of this scene
-    public void StartDialogue(Line[] newLines = null)
+    public void StartDialogue(Line[] newLines = null, Speaker sender = null)
     {
         index = 0;
         Cursor.lockState = CursorLockMode.None;
@@ -74,6 +75,10 @@ public class MisterDialogue : MonoBehaviour
         if (newLines != null)
         {
             lines = newLines;
+        }
+        if (sender != null)
+        {
+            currentSender = sender;
         }
         StartCoroutine(TypeLine());
     }
@@ -170,7 +175,11 @@ public class MisterDialogue : MonoBehaviour
                         playerInputHandler.enabled = true;
                         dialogObj.SetActive(false);
                         active = false;
-                        Debug.Log("Dialog finished");
+                        if (currentSender != null)
+                        {
+                            currentSender.reaction.Invoke();
+                            currentSender = null;
+                        }
                         //dialogueTextComponent.text = string.Empty;
                     }
                 }
