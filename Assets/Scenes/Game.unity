@@ -3308,7 +3308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b86e03972a8664fbb77080b306ad46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhoulSpawn
-  ghoulAnimator: {fileID: 1165599207}
+  ghoulAnimator: {fileID: 1618510277}
 --- !u!65 &711227308
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7223,248 +7223,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.003, y: 0.003, z: 0.003}
   m_Center: {x: -3.356343e-14, y: -0.0000005631227, z: 0.00036507793}
---- !u!1 &1165599201
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1165599206}
-  - component: {fileID: 1165599205}
-  - component: {fileID: 1165599204}
-  - component: {fileID: 1165599203}
-  - component: {fileID: 1165599202}
-  - component: {fileID: 1165599207}
-  - component: {fileID: 1165599208}
-  m_Layer: 0
-  m_Name: Ghoul NPC
-  m_TagString: NPC
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
-  m_IsActive: 1
---- !u!114 &1165599202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165599201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 499c43168bc98e3459024d7e49967e46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Speaker
-  name: Rat Ghost
-  lines:
-  - type: 0
-    text: Hhheeeelllllllooooo..
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: I'm talking to you silly.
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: Yes. Yuuuu, little raaaat.
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: Whyyy am I just a cuuuuube booooo?
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: Welll booooo, IIII don't knowwww
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: Gooo askkk the developerr.
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: But yuuu, yuuuuu littlee rat, neeeeed to revenge meee
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: aaand fullfilll yooouuur destinyyyy
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: Returnnn to the surfaceeee, ...
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: Colllect anything yuuuu find uuusefuuull....
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: aaand come baack dooown heeereee...
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  - type: 0
-    text: I'll beee awaiting yuuuu-
-    activeSpeaker: {fileID: 1165599202}
-    textSpeed: 0
-    choices: []
-  reaction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1165599208}
-        m_TargetAssemblyTypeName: GhoulNPC, Assembly-CSharp
-        m_MethodName: Reaction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!65 &1165599203
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165599201}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1165599204
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165599201}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 6688cfa723827a245b9876e8d860e754, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 2
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1165599205
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165599201}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1165599206
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165599201}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.2588186, z: -0, w: 0.965926}
-  m_LocalPosition: {x: 34.95, y: -17.008, z: -69.38}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
---- !u!95 &1165599207
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165599201}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5277236e12a066d47951a4b2deeac9a3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1165599208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165599201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fc598e0f6a51d441ad0c3eacef62f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GhoulNPC
-  pastText: Goooo littlee raaat, doooon't waaaaste tiiiime ooon meee, boooo!
-  flipper: {fileID: 1870728602}
-  preGameManager: {fileID: 1870728606}
-  ghoulSpeaker: {fileID: 1165599202}
 --- !u!1 &1176125422 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2902869884009338646, guid: a3a9e7b988498a84681ad29a5e798a0f, type: 3}
@@ -9777,6 +9535,252 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617780828}
   m_CullTransparentMesh: 1
+--- !u!1001 &1618510273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.81
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.28677
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -69.561
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8660253
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5572266905149518935, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5572266905149518935, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6688cfa723827a245b9876e8d860e754, type: 2}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_Name
+      value: Ghoul NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383268781822205795, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421855707862594039, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6688cfa723827a245b9876e8d860e754, type: 2}
+    - target: {fileID: 2803436535603912181, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6688cfa723827a245b9876e8d860e754, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1618510276}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1618510275}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1618510277}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1618510279}
+  m_SourcePrefab: {fileID: 100100000, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+--- !u!1 &1618510274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e1769f45bed925b41bb5fd32b6d888fc, type: 3}
+  m_PrefabInstance: {fileID: 1618510273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1618510275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618510274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc598e0f6a51d441ad0c3eacef62f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhoulNPC
+  pastText: Goooo littlee raaat, doooon't waaaaste tiiiime ooon meee, boooo!
+  flipper: {fileID: 1870728602}
+  preGameManager: {fileID: 1870728606}
+  ghoulSpeaker: {fileID: 1618510276}
+--- !u!114 &1618510276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618510274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499c43168bc98e3459024d7e49967e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Speaker
+  name: Rat Ghost
+  lines:
+  - type: 0
+    text: Hhheeeelllllllooooo..
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: I'm talking to you silly.
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: Yes. Yuuuu, little raaaat.
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: Whyyy am I just a cuuuuube booooo?
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: Welll booooo, IIII don't knowwww
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: Gooo askkk the developerr.
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: But yuuu, yuuuuu littlee rat, neeeeed to revenge meee
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: aaand fullfilll yooouuur destinyyyy
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: Returnnn to the surfaceeee, ...
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: Colllect anything yuuuu find uuusefuuull....
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: aaand come baack dooown heeereee...
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  - type: 0
+    text: I'll beee awaiting yuuuu-
+    activeSpeaker: {fileID: 1618510276}
+    textSpeed: 0
+    choices: []
+  reaction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1618510275}
+        m_TargetAssemblyTypeName: GhoulNPC, Assembly-CSharp
+        m_MethodName: Reaction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!95 &1618510277
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618510274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5277236e12a066d47951a4b2deeac9a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1618510279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618510274}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.15, y: 1.51, z: 1.08}
+  m_Center: {x: -0.14036314, y: -6.1461024e-15, z: 0}
 --- !u!1 &1627074720 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7321944996450778655, guid: a3a9e7b988498a84681ad29a5e798a0f, type: 3}
@@ -10766,62 +10770,62 @@ MonoBehaviour:
   lines:
   - type: 0
     text: Hhheeeelllllllooooo..
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: I'm talking to yuuuuu sillyyyy.
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: Yes. Yu, little rat.
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: Why am I just a cube?
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: Welll boooooh, IIII don't knowwww
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: Gooo askkk the devloperr.
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: But yuuu, yuuuuu littlee rat, neeeeed to revenge meee
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: aaand fullfilll yooouuur destinyyyy
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: Returnnn to the surfaceeee, ...
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: Colllect anything yuuuu find uuusefuuull....
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: aaand come baack dooown heeereee...
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   - type: 0
     text: I'll beee awaiting yuuuu-
-    activeSpeaker: {fileID: 1165599202}
+    activeSpeaker: {fileID: 0}
     textSpeed: 0
     choices: []
   guideText: 
@@ -12314,5 +12318,5 @@ SceneRoots:
   - {fileID: 634822291}
   - {fileID: 1347671011}
   - {fileID: 1913316979}
-  - {fileID: 1165599206}
   - {fileID: 711227311}
+  - {fileID: 1618510273}
