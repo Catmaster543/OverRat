@@ -129,6 +129,7 @@ MonoBehaviour:
   hp: 100
   walkSpeed: 2
   xpReward: 10
+  ratPrefab: {fileID: 1847445143293737154, guid: ef2fc5ab6bff8c44088b084e23d5a3e1, type: 3}
 --- !u!114 &1057004752424204176
 MonoBehaviour:
   m_ObjectHideFlags: 0
