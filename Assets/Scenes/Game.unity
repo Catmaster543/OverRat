@@ -2251,7 +2251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &399710563
 Transform:
   m_ObjectHideFlags: 0
@@ -10541,8 +10541,9 @@ GameObject:
   - component: {fileID: 1533228359}
   - component: {fileID: 1533228358}
   - component: {fileID: 1533228357}
+  - component: {fileID: 1533228361}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: AntennaDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10563,7 +10564,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -10576,7 +10577,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533228356}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -10641,6 +10642,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1533228361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533228356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3b8ba1379f14743b55882017cc79cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AntennaTrigger
+  antenna: {fileID: 2042962364}
 --- !u!1001 &1537036209
 PrefabInstance:
   m_ObjectHideFlags: 0

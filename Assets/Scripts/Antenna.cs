@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Antenna : MonoBehaviour
@@ -16,13 +17,14 @@ public class Antenna : MonoBehaviour
         
     }
 
-    public void Electrocute(FirstPersonControler firstPersonControler)
+    public IEnumerator Electrocute(FirstPersonControler firstPersonControler)
     {
+        yield return new WaitForSeconds(5);
         if (!used)
         {
             used = true;
             firstPersonControler.frozen = true;
-            electrocutionAnimator.gameObject.SetActive(true);
+            electrocutionAnimator.SetTrigger("Start");
         }
     }
 }
