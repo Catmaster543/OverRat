@@ -275,6 +275,10 @@ public class MainSceneFlipper : MonoBehaviour
         Rat newRat = player.GetComponent<Rat>();
         newRat.switcher = this;
         newRat.gameStage = gameStage;
+        if (gameStage == Rat.GameStage.PreGame)
+        {
+            newRat.preGManager = preGameManager;
+        }
         preGameManager.player = player;
         foreach (GameObject obj in invSlots)
         {

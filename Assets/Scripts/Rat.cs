@@ -158,4 +158,16 @@ public class Rat : MonoBehaviour
             return false;
         }
     }
+
+    public void DisableRat()
+    {
+        preGManager.gameUi.SetActive(false);
+        preGManager.pregameCanvas.SetActive(false);
+    }
+
+    public void EnableRat()
+    {
+        preGManager.gameUi.SetActive(true);
+        preGManager.pregameCanvas.SetActive(true);
+    }
 }

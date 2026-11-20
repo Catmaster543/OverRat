@@ -12,11 +12,11 @@ public class PreGameManager : MonoBehaviour
     public Transform playerSpawn;
     [SerializeField] private TextMeshProUGUI collectTimeText;
     [SerializeField] private GameObject lab;
-    [SerializeField] private GameObject gameUi;
+    [SerializeField] public GameObject gameUi;
     [SerializeField] private GameObject resultObj;
     [SerializeField] private Material resultMaterial;
     [SerializeField] private GameObject infoText;
-    [SerializeField] private GameObject invPanel;
+    [SerializeField] public GameObject invPanel;
     [SerializeField] private GameObject tpSpot1;
     public GameObject player;
 
@@ -65,6 +65,7 @@ public class PreGameManager : MonoBehaviour
         Rat currentRat = spawnedPlayer.GetComponent<Rat>();
         currentRat.switcher = flipper;
         currentRat.gameStage = Rat.GameStage.PreGame;
+        currentRat.preGManager = this;
         flipper.gameStage = Rat.GameStage.PreGame;
         player = spawnedPlayer;
         flipper.currentRat = spawnedPlayer;
