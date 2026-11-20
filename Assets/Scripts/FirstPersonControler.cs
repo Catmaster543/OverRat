@@ -32,12 +32,16 @@ public class FirstPersonControler : MonoBehaviour
         Cursor.visible = false;
     }
 
-    
+    public bool frozen;
+
     void Update()
     {
-        HandleMovement();
-        HandleRotation();
-        HandleBiting();
+        if (!frozen)
+        {
+            HandleMovement();
+            HandleRotation();
+            HandleBiting();
+        }
     }
 
     private Vector3 CalculateWorldDirection()

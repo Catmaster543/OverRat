@@ -230,13 +230,19 @@ public class MainSceneFlipper : MonoBehaviour
     public IEnumerator ShowTipWithDelay()
     {
         yield return new WaitForSeconds(2);
-        if (currentRat.GetComponent<Rat>().ActivateBiteTip())
+        if (currentRat != null)
         {
-            biteTip.SetActive(true);
-        }
-        else
-        {
-            biteTip.SetActive(false);
+            if (currentRat.TryGetComponent<Rat>(out Rat rat))
+            {
+                if (rat.ActivateBiteTip())
+                {
+                    biteTip.SetActive(true);
+                }
+                else
+                {
+                    biteTip.SetActive(false);
+                }
+            }
         }
     }
 

@@ -9,6 +9,8 @@ public class MapManager : MonoBehaviour
 
     public Animator uniAnimator;
 
+    FirstPersonControler firstPersonControler;
+
     float time;
 
     void Update()
@@ -41,7 +43,10 @@ public class MapManager : MonoBehaviour
 
     public IEnumerator TeleportPlayer(Transform destination, CharacterController controller)
     {
+        firstPersonControler = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonControler>();
+        firstPersonControler.frozen = true;
         controller.enabled = false;
+        
 
         uniAnimator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1.5f);
@@ -49,6 +54,7 @@ public class MapManager : MonoBehaviour
         controller.gameObject.transform.position = destination.position;
         controller.gameObject.transform.rotation = destination.rotation;
         controller.enabled = true;
+        firstPersonControler.frozen = false;
         yield return new WaitForSeconds(1.5f);
     }
 }
