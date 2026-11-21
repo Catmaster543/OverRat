@@ -298,6 +298,11 @@ public class MainSceneFlipper : MonoBehaviour
         yield return new WaitForSeconds(0.9f);
     }
 
+    public void ResultsConfirmClick()
+    {
+        lab.GetComponent<Animator>().SetTrigger("ExitResults");
+    }
+
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene("Main Menu");

@@ -8,6 +8,8 @@ public class Slot : MonoBehaviour
     public Image iconDisplay;
     public Image effectDisplay;
 
+    public Effect effect;
+
     void Start()
     {
         iconDisplay = GetComponent<Image>();
@@ -27,6 +29,7 @@ public class Slot : MonoBehaviour
                     {
                         effectDisplay.sprite = switcher.effectSprites[(int)effect];
                         effectDisplay.gameObject.SetActive(true);
+                        this.effect = effect;
                     }
                     else
                     {
@@ -51,6 +54,7 @@ public class Slot : MonoBehaviour
         {
             effectDisplay.sprite = switcher.effectSprites[(int)effect];
             effectDisplay.gameObject.SetActive(true);
+            this.effect = effect;
         }
         else
         {

@@ -18,12 +18,17 @@ public class PreGameManager : MonoBehaviour
     [SerializeField] private GameObject infoText;
     [SerializeField] public GameObject invPanel;
     [SerializeField] private GameObject tpSpot1;
+    [SerializeField] private TextMeshProUGUI damageText;
+    [SerializeField] private TextMeshProUGUI effect1Text;
+    [SerializeField] private TextMeshProUGUI effect1TT;
     public GameObject player;
 
     [Header("Settings")]
     [SerializeField] private float collectTime;
 
     bool tick = false;
+
+
     
     void Start()
     {
@@ -101,5 +106,18 @@ public class PreGameManager : MonoBehaviour
         Destroy(player);
         flipper.StopFade();
         SetResultColors();
+        CheckEffectsInIngredients();
+    }
+
+    void CheckEffectsInIngredients()
+    {
+        foreach (GameObject obj in flipper.invSlots)
+        {
+            if (obj.GetComponent<Slot>().effect != Slot.Effect.None)
+            {
+                effect1Text.text = obj.GetComponent<Slot>().effect.ToString();
+                effect1TT.text = "Adds extra damage";
+            }
+        }
     }
 }
