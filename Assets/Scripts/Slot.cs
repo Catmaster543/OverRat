@@ -4,14 +4,16 @@ using UnityEngine.UI;
 public class Slot : MonoBehaviour
 {
     public GameObject currentItem;
+    public MainSceneFlipper switcher;
     public Image iconDisplay;
+    public Image effectDisplay;
 
     void Start()
     {
         iconDisplay = GetComponent<Image>();
     }
 
-    public void UpdateIcon()
+    public void UpdateIcon(Effect effect = Effect.None)
     {
         if (iconDisplay != null)
         {
@@ -20,6 +22,16 @@ public class Slot : MonoBehaviour
                 if (currentItem.GetComponent<Ingredient>().icon != null)
                 {
                     iconDisplay.sprite = currentItem.GetComponent<Ingredient>().icon;
+
+                    if (effect != Effect.None)
+                    {
+                        effectDisplay.sprite = switcher.effectSprites[(int)effect];
+                        effectDisplay.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        effectDisplay.gameObject.SetActive(false);
+                    }
                 }
                 else
                 {
@@ -31,5 +43,24 @@ public class Slot : MonoBehaviour
                 iconDisplay.sprite = null;
             }
         }
+    }
+
+    public void EffectSlot(Effect effect)
+    {
+        if (effect != Effect.None)
+        {
+            effectDisplay.sprite = switcher.effectSprites[(int)effect];
+            effectDisplay.gameObject.SetActive(true);
+        }
+        else
+        {
+            effectDisplay.gameObject.SetActive(false);
+        }
+    }
+
+    public enum Effect
+    {
+        None,
+        Shocked
     }
 }

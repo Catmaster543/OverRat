@@ -58,9 +58,17 @@ public class MainSceneFlipper : MonoBehaviour
 
     public List<GameObject> spawnedIngredients = new();
 
+    [Header("Sprite references")]
+    public Sprite[] effectSprites;
+
     void Start()
     {
         uniAnimator.Play("FadeOut");
+
+        foreach (GameObject obj in invSlots)
+        {
+            obj.GetComponent<Slot>().switcher = this;
+        }
     }
 
     void Update()
