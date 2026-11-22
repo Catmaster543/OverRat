@@ -34,6 +34,8 @@ public class FirstPersonControler : MonoBehaviour
 
     public bool frozen;
 
+    public float timeInAir = 0;
+
     void Update()
     {
         if (!frozen)
@@ -63,6 +65,15 @@ public class FirstPersonControler : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
+            if (timeInAir >= 1.5f)
+            {
+                Destroy(player.gameObject);
+            }
+            else
+            {
+                timeInAir = 0;
+            }
+
             currentMovement.y = -0.5f;
 
             if (playerInputHandler.JumpTriggered)
@@ -73,6 +84,7 @@ public class FirstPersonControler : MonoBehaviour
         else
         {
             currentMovement.y += Physics.gravity.y * gravityMultiplier * Time.deltaTime;
+            timeInAir += Time.deltaTime;
         }
     }
 
