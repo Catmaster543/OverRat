@@ -8,6 +8,7 @@ In this game, you **play as a rat carrying an uknown disease, that will cause th
   - During the pre-game you can collect ingredients around the map with a set time
   - In the game you "bite" people (for now)
 - **Working biting/damage & hp system** - you can bite dummy targets for now that have a set amout of hp and if you cause enough damage you kill them (for now).
+- **First puzzle in place** - explore the map a little to find these, once you figure out where they're at you'll find a way to get there.
 - **Gaining experience** - the more people you *kill* (only for now) the more xp you get.
 - **Simple upgrades** - upgrade your damage, or range for the xp you've received in the sewers (which is just a baseplate with 5 rats for now)
 - **Working fading system** that fades between transfers in the main game (not from main menu yet!)
@@ -16,38 +17,40 @@ In this game, you **play as a rat carrying an uknown disease, that will cause th
 - **Damage and biting indicators** - whenever you begin your round you'll get a tip reminding you to bite someone. After you do so it's gone. And once you bite someone you can see how much hp they have left from the red bar that appears.
 - **Main menu** - I've implemented a super simple main menu, which allows you to either enter the game or quit.
 - **Random NPC movement** - spawned in NPC move around the map
+- **3 Different ingredients** - collect these and merge them into your infection! (still wip)
 - **Brewing cutscene** - after you finish collecting the ingredients they will all be dropped into the cooking pot and a cube with color mixed from what you've picked up will appear. This will be replaced in the future
+- **Antenna cutscene** - don't go near one, it ain't the safest place to be!
 - **Talkable ol'rat ghost NPC** - have a chat with him, you can find him in the sewers.
 - **Game ending conditions and menus for them** - if you run out of lives, you'll get the game over menu. If you manage to bite every person that has been spawned in you win!
 
 ## Latest added features (what was added this update?)
-- The **sewers**!
-  - An underground map extension with some spoooky hallways!
-  - Dimly, if at all lit
-  - First real and scary dangerous object - water. Don't touch it.
-  - Spooky
-- **The ol'rat Ghost NPC**
-  - Go have a chat with him, that is if you find him :p
-- **Dialogue system** - used by the ghost
-- **Walkable tp spots**
-  - In other terms - two paired places you can walk one side into, to exit on the other
-  - In this case used for the transfer between sewers and the main map (aka. surface)!
-- **Sewers migration**
-  - Moved the brewing cutscene to the sewers
-  - Moved the game sub-menu to the sewers
-  - Moved player spawn there as well
-- **More animations!**
-  - Added ready and crossing the plank animations for the sacrifical rats
-  - Added ol'rat ghosts appear and idle (=floating) animation
-  - Added fade in/out animations for the main menu
-- **Lighting**
-  - Switched the lighting system to light probes from lightmap
-  - Baked the lighting into the game
-  - Allows for the sewers to be dark, while the surface remain sunny
-- **Other QoL and fixed features**
-  - Added respawns during the intro and pregame stage
-  - Added exit text in the sewers to indicate the exit
-  - Fixed many many bugs
+### Reach the peak update
+- **Big map improvements!**
+  - Added a few extra buildings
+  - Added windows to some buildings
+  - Added roofs to all houses on the map
+  - Added almost full interior of one of the rooms
+  - Added antenna to one of the houses
+  - Fixed the map's scale of certain objects, like the trees for example
+- **Added the first puzzle**
+  - Reason for making of one of the new houses interiors
+  - Mainly parkour, should be doable in the newly extended collect time
+- **New antenna cutscene**
+  - Don't stand near the antenna, that's all I'll tell you
+- **2 New ingredients**
+  - **The rock** - yeah it's a rock, what did you expect?
+  - **The leaf** - found under trees surprisingl
+- **Effects on ingredients**
+  - Ingredients can now have their own effects, which can modify their (for example) damage values
+  - First test effect is already in-game, try to find it!
+  - Added showing of effect icons to the inventory, so you know if you have an effect on an item or not
+- **Results screen**
+  - A super simple screen shown after the brewing cutscene that shows you damage and effects for now
+- **Added rat spawning from killed enemies**
+  - Now when you bite someone to death, a rat shall appear in their place. (Sometimes the rat spawns underground for some reason, not sure why it's not working)
+- **Added fall damage**
+  - I'm sorry, it had to be done. When you jumped from the roof of a building, just landing and being able to continue normally just doesn't make much sense.
+- **And so much more!** - be sure to read through my commits in case I missed anything here :)
 
 ## Planned features
 - Proper models for people
