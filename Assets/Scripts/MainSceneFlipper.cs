@@ -69,6 +69,8 @@ public class MainSceneFlipper : MonoBehaviour
         {
             obj.GetComponent<Slot>().switcher = this;
         }
+
+        gameObject.GetComponent<SkyboxManager>().DarkenTheSky();
     }
 
     void Update()

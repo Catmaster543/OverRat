@@ -17,6 +17,7 @@ public class AntennaEnd : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SkyboxManager>().ResetSky();
         Rat player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rat>();
         player.EnableRat();
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonControler>().frozen = false;

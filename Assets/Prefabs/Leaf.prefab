@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   damageBonus: 1
-  icon: {fileID: 0}
+  icon: {fileID: 714957608, guid: c508238af3bfeb64d9eac40b4ea85200, type: 3}
   colorEffect: {r: 0.3490566, g: 0.30519378, b: 0.1761748, a: 0}
   smoothnessEff: 0
 --- !u!54 &7598950804808643587
