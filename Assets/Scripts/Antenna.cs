@@ -24,6 +24,7 @@ public class Antenna : MonoBehaviour
         {
             used = true;
             firstPersonControler.frozen = true;
+            firstPersonControler.gameObject.GetComponentInChildren<Camera>().gameObject.SetActive(false);
             electrocutionAnimator.SetTrigger("Start");
         }
     }

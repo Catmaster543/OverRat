@@ -24,6 +24,8 @@ public class Rat : MonoBehaviour
     public GameStage gameStage;
     public bool forceKill;
 
+    private Camera playerCam;
+
     public enum GameStage
     {
         Intro,
@@ -36,6 +38,7 @@ public class Rat : MonoBehaviour
         enemyHpIndicator = switcher.enemyHpIndicator;
         damage = switcher.playerDamage;
         range = switcher.playerRange;
+        playerCam = GetComponentInChildren<Camera>();
     }
     void Update()
     {
@@ -169,6 +172,7 @@ public class Rat : MonoBehaviour
     {
         preGManager.gameUi.SetActive(true);
         preGManager.pregameCanvas.SetActive(true);
+        playerCam.gameObject.SetActive(true);
     }
 
     public void GiveEffectToAllItems(Effect effect)
