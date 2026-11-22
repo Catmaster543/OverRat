@@ -15,7 +15,7 @@ public class Slot : MonoBehaviour
         iconDisplay = GetComponent<Image>();
     }
 
-    public void UpdateIcon(Effect effect = Effect.None)
+    public void UpdateIcon(Effect effect = null)
     {
         if (iconDisplay != null)
         {
@@ -25,9 +25,9 @@ public class Slot : MonoBehaviour
                 {
                     iconDisplay.sprite = currentItem.GetComponent<Ingredient>().icon;
 
-                    if (effect != Effect.None)
+                    if (effect != null)
                     {
-                        effectDisplay.sprite = switcher.effectSprites[(int)effect];
+                        effectDisplay.sprite = effect.effectSprite;
                         effectDisplay.gameObject.SetActive(true);
                         this.effect = effect;
                     }
@@ -50,9 +50,9 @@ public class Slot : MonoBehaviour
 
     public void EffectSlot(Effect effect)
     {
-        if (effect != Effect.None)
+        if (effect != null)
         {
-            effectDisplay.sprite = switcher.effectSprites[(int)effect];
+            effectDisplay.sprite = effect.effectSprite;
             effectDisplay.gameObject.SetActive(true);
             this.effect = effect;
         }
@@ -60,11 +60,5 @@ public class Slot : MonoBehaviour
         {
             effectDisplay.gameObject.SetActive(false);
         }
-    }
-
-    public enum Effect
-    {
-        None,
-        Shocked
     }
 }

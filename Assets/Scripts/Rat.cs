@@ -171,7 +171,7 @@ public class Rat : MonoBehaviour
         preGManager.pregameCanvas.SetActive(true);
     }
 
-    public void GiveEffectToAllItems(Slot.Effect effect)
+    public void GiveEffectToAllItems(Effect effect)
     {
         foreach (GameObject obj in switcher.invSlots)
         {

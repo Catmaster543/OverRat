@@ -21,7 +21,7 @@ public class AntennaEnd : StateMachineBehaviour
         Rat player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rat>();
         player.EnableRat();
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonControler>().frozen = false;
-        player.GiveEffectToAllItems(Slot.Effect.Shocked);
+        player.GiveEffectToAllItems(animator.gameObject.GetComponent<Effect>());
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

@@ -402,7 +402,7 @@ MonoBehaviour:
   switcher: {fileID: 0}
   iconDisplay: {fileID: 0}
   effectDisplay: {fileID: 347243390}
-  effect: 0
+  effect: {fileID: 0}
 --- !u!1 &55822144
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,7 +692,7 @@ MonoBehaviour:
   switcher: {fileID: 0}
   iconDisplay: {fileID: 0}
   effectDisplay: {fileID: 239899600}
-  effect: 0
+  effect: {fileID: 0}
 --- !u!1 &88570835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,7 +3571,7 @@ MonoBehaviour:
   switcher: {fileID: 0}
   iconDisplay: {fileID: 0}
   effectDisplay: {fileID: 2124586611}
-  effect: 0
+  effect: {fileID: 0}
 --- !u!1 &411715756
 GameObject:
   m_ObjectHideFlags: 0
@@ -4673,7 +4673,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5756,7 +5756,7 @@ ReflectionProbe:
   m_FarClip: 1000
   m_ShadowDistance: 100
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 0}
+  m_BackGroundColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 0}
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7098,7 +7098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfdd7c91876630b4a817654dd066e0fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.68
+      value: 2.797
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfdd7c91876630b4a817654dd066e0fe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7248,6 +7248,7 @@ MonoBehaviour:
   icon: {fileID: 1190617992, guid: aab50d1020f158b4a997b6d6745a7673, type: 3}
   colorEffect: {r: 0.5, g: 0, b: 0, a: 0}
   smoothnessEff: 1
+  effect: {fileID: 0}
 --- !u!1001 &926211336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9517,6 +9518,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a3a9e7b988498a84681ad29a5e798a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1353077183}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a3a9e7b988498a84681ad29a5e798a0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353077184}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: a3a9e7b988498a84681ad29a5e798a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 435879017}
@@ -10772,6 +10776,7 @@ MonoBehaviour:
   icon: {fileID: 1190617992, guid: aab50d1020f158b4a997b6d6745a7673, type: 3}
   colorEffect: {r: 0.5, g: 0, b: 0, a: 0}
   smoothnessEff: 1
+  effect: {fileID: 0}
 --- !u!64 &1162990358
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11777,6 +11782,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1353077184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353077182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a67fa03fe4def49a39b2c7248e3d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Effect
+  name: Shocked
+  description: Adds +2 Damage
+  effectSprite: {fileID: 210633535, guid: 4393653c65adfa04dbc76762f7b49a44, type: 3}
+  bonusDamage: 2
 --- !u!1 &1375182099 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5201057916121764423, guid: a3a9e7b988498a84681ad29a5e798a0f, type: 3}

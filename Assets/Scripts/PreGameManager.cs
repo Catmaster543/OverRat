@@ -28,8 +28,6 @@ public class PreGameManager : MonoBehaviour
 
     bool tick = false;
 
-
-    
     void Start()
     {
         SpawnPlayer();
@@ -106,18 +104,32 @@ public class PreGameManager : MonoBehaviour
         Destroy(player);
         flipper.StopFade();
         SetResultColors();
-        CheckEffectsInIngredients();
+        flipper.playerDamage += CheckIngredients();
     }
 
-    void CheckEffectsInIngredients()
+    int CheckIngredients()
     {
+        int bonusDamage = 0;
+
         foreach (GameObject obj in flipper.invSlots)
         {
-            if (obj.GetComponent<Slot>().effect != Slot.Effect.None)
+            Slot slot = obj.GetComponent<Slot>();
+
+            if (slot.currentItem != null)
             {
-                effect1Text.text = obj.GetComponent<Slot>().effect.ToString();
-                effect1TT.text = "Adds extra damage";
+                bonusDamage += slot.currentItem.GetComponent<Ingredient>().damageBonus;
+            }
+
+            if (slot.effect != null)
+            {
+                bonusDamage += slot.effect.bonusDamage;
+
+                effect1Text.text = slot.effect.name;
+                effect1TT.text = slot.effect.description;
             }
         }
+
+        damageText.text = $"Damage: {10 + bonusDamage}";
+        return bonusDamage;
     }
 }

@@ -9,4 +9,6 @@ public class Ingredient : MonoBehaviour
 
     public Color colorEffect;
     public float smoothnessEff;
+
+    public Effect effect;
 }
