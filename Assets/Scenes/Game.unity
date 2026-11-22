@@ -592,7 +592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (12)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -932,7 +932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (8)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1499,7 +1499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (3)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1588,7 +1588,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7437882597179954994, guid: e830ac799fcded04093afef344c9aea5, type: 3}
       propertyPath: m_Name
-      value: Rock (3)
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 7814724451937340808, guid: e830ac799fcded04093afef344c9aea5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3945,7 +3945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (7)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4092,7 +4092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (11)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4514,7 +4514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (6)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7258,7 +7258,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7437882597179954994, guid: e830ac799fcded04093afef344c9aea5, type: 3}
       propertyPath: m_Name
-      value: Rock (4)
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 7814724451937340808, guid: e830ac799fcded04093afef344c9aea5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13324,7 +13324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (1)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13598,7 +13598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (10)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14598,7 +14598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (5)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14909,7 +14909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (9)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15548,7 +15548,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7437882597179954994, guid: e830ac799fcded04093afef344c9aea5, type: 3}
       propertyPath: m_Name
-      value: Rock (1)
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 7814724451937340808, guid: e830ac799fcded04093afef344c9aea5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15784,7 +15784,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7437882597179954994, guid: e830ac799fcded04093afef344c9aea5, type: 3}
       propertyPath: m_Name
-      value: Rock (5)
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 7814724451937340808, guid: e830ac799fcded04093afef344c9aea5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16657,7 +16657,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7437882597179954994, guid: e830ac799fcded04093afef344c9aea5, type: 3}
       propertyPath: m_Name
-      value: Rock (2)
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 7814724451937340808, guid: e830ac799fcded04093afef344c9aea5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16989,7 +16989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (13)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17596,7 +17596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613217126414041261, guid: cffe5f52698722f49ae6efe4c04e2bde, type: 3}
       propertyPath: m_Name
-      value: Leaf (2)
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
