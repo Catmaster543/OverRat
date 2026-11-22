@@ -1,6 +1,10 @@
 # What is this game about?
 In this game, you **play as a rat carrying an uknown disease, that will cause those bitten enough to turn into one of you, a rat.** Your ultimate goal is to infect the entirety of humanity, but that's a far stretch for now. **Play [here](https://cat-master543.itch.io/overrat)**
 
+<p align="center">
+  <img width="502" height="432" alt="Snímek obrazovky 2026-10-25 181116" src="https://github.com/user-attachments/assets/0e01cd5c-2eee-4f5e-99cb-85e04d0c8ff8" />
+</p>
+
 ## Current features:
 - **Fully working player movement system** - you can move around, rotate your camera and even make tiny cute jumps!
 - **Intro, Pre-game & game phases**
